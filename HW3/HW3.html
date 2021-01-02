@@ -14272,7 +14272,7 @@ a.anchor-link {
 <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[85]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -14283,6 +14283,7 @@ a.anchor-link {
 <span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span><span class="p">,</span> <span class="n">Ridge</span><span class="p">,</span> <span class="n">Lasso</span><span class="p">,</span> <span class="n">ElasticNet</span><span class="p">,</span> <span class="n">RidgeCV</span><span class="p">,</span> <span class="n">LassoCV</span><span class="p">,</span> <span class="n">ElasticNetCV</span>
 <span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span><span class="p">,</span> <span class="n">TimeSeriesSplit</span><span class="p">,</span> <span class="n">GridSearchCV</span>
 <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">make_scorer</span>
+<span class="kn">import</span> <span class="nn">cvxpy</span> <span class="k">as</span> <span class="nn">cp</span>
 <span class="kn">import</span> <span class="nn">warnings</span>
 <span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
 </pre></div>
@@ -15634,7 +15635,7 @@ It has 1798 values instead of 1797
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>1563.7737330261807</pre>
+<pre>1563.773733026217</pre>
 </div>
 
 </div>
@@ -15686,7 +15687,7 @@ It has 1798 values instead of 1797
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>4.228027341337843</pre>
+<pre>4.228027341337849</pre>
 </div>
 
 </div>
@@ -15822,7 +15823,7 @@ It has 1798 values instead of 1797
     <tr>
       <th>0</th>
       <td>2191.320796</td>
-      <td>[0.44283593084416445, 0.4868830651080495]</td>
+      <td>[0.44283593084416456, 0.4868830651080494]</td>
       <td>3.262965</td>
     </tr>
     <tr>
@@ -15834,79 +15835,79 @@ It has 1798 values instead of 1797
     <tr>
       <th>2</th>
       <td>2196.856381</td>
-      <td>[0.4257794091603697, 0.4971411372414109]</td>
+      <td>[0.4257794091603701, 0.4971411372414108]</td>
       <td>3.418696</td>
     </tr>
     <tr>
       <th>3</th>
       <td>2229.136680</td>
-      <td>[0.42694013999304997, 0.49279668383745623]</td>
+      <td>[0.4269401399930502, 0.49279668383745584]</td>
       <td>3.202714</td>
     </tr>
     <tr>
       <th>4</th>
       <td>2204.258151</td>
-      <td>[0.44497269964548897, 0.47468593653094066]</td>
+      <td>[0.44497269964548897, 0.4746859365309408]</td>
       <td>3.183023</td>
     </tr>
     <tr>
       <th>5</th>
       <td>2225.031436</td>
-      <td>[0.4784598574775603, 0.43984866493330993]</td>
+      <td>[0.47845985747756026, 0.43984866493330954]</td>
       <td>3.187450</td>
     </tr>
     <tr>
       <th>6</th>
       <td>2126.946311</td>
-      <td>[0.5462000015483183, 0.375963548543053]</td>
+      <td>[0.5462000015483184, 0.3759635485430529]</td>
       <td>3.148057</td>
     </tr>
     <tr>
       <th>7</th>
       <td>2310.650658</td>
-      <td>[0.652830455986844, 0.2663125947537361]</td>
+      <td>[0.6528304559868441, 0.266312594753736]</td>
       <td>3.776119</td>
     </tr>
     <tr>
       <th>8</th>
       <td>3232.765477</td>
-      <td>[0.7255429107460374, 0.17372354180037594]</td>
+      <td>[0.7255429107460375, 0.17372354180037602]</td>
       <td>4.672350</td>
     </tr>
     <tr>
       <th>9</th>
       <td>3594.994097</td>
-      <td>[0.7206582620945774, 0.1743794055691581]</td>
+      <td>[0.720658262094577, 0.17437940556915793]</td>
       <td>5.484825</td>
     </tr>
     <tr>
       <th>10</th>
       <td>3740.840542</td>
-      <td>[0.686855798974215, 0.20620888393078515]</td>
+      <td>[0.6868557989742152, 0.20620888393078524]</td>
       <td>6.087343</td>
     </tr>
     <tr>
       <th>11</th>
       <td>3958.706185</td>
-      <td>[0.6635926844235237, 0.2249924299187785]</td>
+      <td>[0.6635926844235238, 0.2249924299187787]</td>
       <td>6.273932</td>
     </tr>
     <tr>
       <th>12</th>
       <td>3662.112191</td>
-      <td>[0.6131376004740872, 0.28020662531729407]</td>
+      <td>[0.6131376004740872, 0.280206625317294]</td>
       <td>6.544300</td>
     </tr>
     <tr>
       <th>13</th>
       <td>3806.669508</td>
-      <td>[0.5867996693580267, 0.30354907409341564]</td>
+      <td>[0.5867996693580264, 0.3035490740934156]</td>
       <td>6.684703</td>
     </tr>
     <tr>
       <th>14</th>
       <td>4066.614508</td>
-      <td>[0.6255586594957997, 0.25972764221696065]</td>
+      <td>[0.6255586594957999, 0.2597276422169607]</td>
       <td>6.481529</td>
     </tr>
     <tr>
@@ -15918,25 +15919,25 @@ It has 1798 values instead of 1797
     <tr>
       <th>16</th>
       <td>3815.717416</td>
-      <td>[0.645630121317086, 0.24710826868787575]</td>
+      <td>[0.6456301213170859, 0.2471082686878757]</td>
       <td>5.147396</td>
     </tr>
     <tr>
       <th>17</th>
       <td>3389.937468</td>
-      <td>[0.6430749117847044, 0.26209161881352805]</td>
+      <td>[0.6430749117847043, 0.26209161881352805]</td>
       <td>4.608824</td>
     </tr>
     <tr>
       <th>18</th>
       <td>3018.021772</td>
-      <td>[0.5819841848024999, 0.3337088128516082]</td>
+      <td>[0.5819841848025005, 0.3337088128516082]</td>
       <td>3.736631</td>
     </tr>
     <tr>
       <th>19</th>
       <td>3163.114542</td>
-      <td>[0.525094947210757, 0.38685808872462835]</td>
+      <td>[0.5250949472107568, 0.3868580887246283]</td>
       <td>3.433788</td>
     </tr>
     <tr>
@@ -15948,13 +15949,13 @@ It has 1798 values instead of 1797
     <tr>
       <th>21</th>
       <td>2658.049025</td>
-      <td>[0.49542318716621647, 0.42909218323607395]</td>
+      <td>[0.49542318716621625, 0.42909218323607395]</td>
       <td>3.166258</td>
     </tr>
     <tr>
       <th>22</th>
       <td>2825.549459</td>
-      <td>[0.4753819604462084, 0.4427003153475419]</td>
+      <td>[0.4753819604462081, 0.44270031534754206]</td>
       <td>3.166973</td>
     </tr>
     <tr>
@@ -17931,7 +17932,7 @@ MAPE of these hours are worse than the MAPE from part 2: [8, 9, 10, 11, 12, 13, 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>3.773057769299931</pre>
+<pre>3.7730577692999265</pre>
 </div>
 
 </div>
@@ -17996,6 +17997,482 @@ MAPE of these hours are worse than the MAPE from part 2: [8, 9, 10, 11, 12, 13, 
 </div>
 </div>
 
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[64]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mapes_2</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[64]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>{0: 1.7227150562030966,
+ 1: 1.8521857840177438,
+ 2: 1.8061087516518668,
+ 3: 1.6916192566923696,
+ 4: 1.7063080582142711,
+ 5: 1.6578220859365536,
+ 6: 1.8454593947591753,
+ 7: 2.2895365632273585,
+ 8: 3.779430483538667,
+ 9: 4.704076677830269,
+ 10: 5.03898306041018,
+ 11: 5.184482390218935,
+ 12: 5.438269755129532,
+ 13: 5.314131706454425,
+ 14: 5.324970522329706,
+ 15: 5.00204022174517,
+ 16: 4.3272056674712625,
+ 17: 3.432745003367733,
+ 18: 2.4343531464333186,
+ 19: 2.3058759973263223,
+ 20: 2.152573706810608,
+ 21: 2.1528592971976663,
+ 22: 2.1364788524539593,
+ 23: 2.3253716231683503}</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[65]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mapes_7</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[65]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>{0: 2.3187751915371746,
+ 1: 2.3356134293153965,
+ 2: 2.4055439082106544,
+ 3: 2.1344793937175996,
+ 4: 2.1614873557261043,
+ 5: 2.1757526128461744,
+ 6: 2.316990943487149,
+ 7: 2.4365890764649802,
+ 8: 3.190262221949373,
+ 9: 4.104134683674137,
+ 10: 4.6248437395411655,
+ 11: 4.796645023616578,
+ 12: 4.9516757438562005,
+ 13: 5.109410874210613,
+ 14: 4.717990168679073,
+ 15: 4.186757785165458,
+ 16: 3.257287285794165,
+ 17: 2.709085452895936,
+ 18: 2.0231005396065855,
+ 19: 1.8770986240466137,
+ 20: 1.953702023074413,
+ 21: 1.9943715632428243,
+ 22: 1.849475407817716,
+ 23: 2.104225790571026}</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[145]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mapes_27</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">index</span> <span class="o">=</span> <span class="n">mapes_2</span><span class="o">.</span><span class="n">keys</span><span class="p">(),</span> <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;2&quot;</span><span class="p">,</span><span class="s2">&quot;7&quot;</span><span class="p">])</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[148]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mapes_27</span><span class="p">[</span><span class="s2">&quot;2&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mapes_2</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+<span class="n">mapes_27</span><span class="p">[</span><span class="s2">&quot;7&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mapes_7</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[149]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">mapes_27</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[149]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>&lt;AxesSubplot:&gt;</pre>
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedImage jp-OutputArea-output ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[156]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;These are the hours lag2 model performed better: &quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">mapes_27</span><span class="p">[</span><span class="n">mapes_27</span><span class="p">[</span><span class="s2">&quot;2&quot;</span><span class="p">]</span><span class="o">&gt;</span><span class="n">mapes_27</span><span class="p">[</span><span class="s2">&quot;7&quot;</span><span class="p">]])</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>These are the hours lag2 model performed better: 
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>2</th>
+      <th>7</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>8</th>
+      <td>3.779430</td>
+      <td>3.190262</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>4.704077</td>
+      <td>4.104135</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>5.038983</td>
+      <td>4.624844</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>5.184482</td>
+      <td>4.796645</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>5.438270</td>
+      <td>4.951676</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>5.314132</td>
+      <td>5.109411</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>5.324971</td>
+      <td>4.717990</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>5.002040</td>
+      <td>4.186758</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>4.327206</td>
+      <td>3.257287</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>3.432745</td>
+      <td>2.709085</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>2.434353</td>
+      <td>2.023101</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>2.305876</td>
+      <td>1.877099</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>2.152574</td>
+      <td>1.953702</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>2.152859</td>
+      <td>1.994372</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>2.136479</td>
+      <td>1.849475</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>2.325372</td>
+      <td>2.104226</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[157]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;These are the hours lag7 model performed better: &quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">mapes_27</span><span class="p">[</span><span class="n">mapes_27</span><span class="p">[</span><span class="s2">&quot;2&quot;</span><span class="p">]</span><span class="o">&lt;</span><span class="n">mapes_27</span><span class="p">[</span><span class="s2">&quot;7&quot;</span><span class="p">]])</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>These are the hours lag7 model performed better: 
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>2</th>
+      <th>7</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1.722715</td>
+      <td>2.318775</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1.852186</td>
+      <td>2.335613</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1.806109</td>
+      <td>2.405544</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1.691619</td>
+      <td>2.134479</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1.706308</td>
+      <td>2.161487</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>1.657822</td>
+      <td>2.175753</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>1.845459</td>
+      <td>2.316991</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>2.289537</td>
+      <td>2.436589</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>As it can be seen, the best results were obtained by 2 day lag model, however, overall accuracy of the models are similar.</p>
+
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
@@ -18010,13 +18487,69 @@ MAPE of these hours are worse than the MAPE from part 2: [8, 9, 10, 11, 12, 13, 
 </div>
 </div>
 
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[93]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_train</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">train_data_7</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">3</span><span class="p">:])</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[94]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Y_train</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">train_data_7</span><span class="p">[</span><span class="s2">&quot;consumption&quot;</span><span class="p">])</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[91]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_test</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">test_data_7</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">3</span><span class="p">:])</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[92]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Y_test</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">test_data_7</span><span class="p">[</span><span class="s2">&quot;consumption&quot;</span><span class="p">])</span> 
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[64]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[159]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">cvxpy</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_train</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 
      </div>
@@ -18032,245 +18565,15 @@ MAPE of these hours are worse than the MAPE from part 2: [8, 9, 10, 11, 12, 13, 
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[159]:</div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Collecting cvxpy
-  Using cached cvxpy-1.1.7-cp38-cp38-win_amd64.whl (816 kB)
-Collecting osqp&gt;=0.4.1
-  Using cached osqp-0.6.1-cp38-none-win_amd64.whl (153 kB)
-Requirement already satisfied: scipy&gt;=1.1.0 in c:\users\egces\anaconda3\lib\site-packages (from cvxpy) (1.5.2)
-Collecting scs&gt;=1.1.6
-Note: you may need to restart the kernel to use updated packages.
-</pre>
-</div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>(42216, 26)</pre>
 </div>
 
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>  ERROR: Command errored out with exit status 1:
-   command: &#39;C:\Users\egces\anaconda3\python.exe&#39; -u -c &#39;import sys, setuptools, tokenize; sys.argv[0] = &#39;&#34;&#39;&#34;&#39;C:\\Users\\egces\\AppData\\Local\\Temp\\pip-install-beaef_ft\\scs\\setup.py&#39;&#34;&#39;&#34;&#39;; __file__=&#39;&#34;&#39;&#34;&#39;C:\\Users\\egces\\AppData\\Local\\Temp\\pip-install-beaef_ft\\scs\\setup.py&#39;&#34;&#39;&#34;&#39;;f=getattr(tokenize, &#39;&#34;&#39;&#34;&#39;open&#39;&#34;&#39;&#34;&#39;, open)(__file__);code=f.read().replace(&#39;&#34;&#39;&#34;&#39;\r\n&#39;&#34;&#39;&#34;&#39;, &#39;&#34;&#39;&#34;&#39;\n&#39;&#34;&#39;&#34;&#39;);f.close();exec(compile(code, __file__, &#39;&#34;&#39;&#34;&#39;exec&#39;&#34;&#39;&#34;&#39;))&#39; bdist_wheel -d &#39;C:\Users\egces\AppData\Local\Temp\pip-wheel-3l0_s3c0&#39;
-       cwd: C:\Users\egces\AppData\Local\Temp\pip-install-beaef_ft\scs\
-  Complete output (76 lines):
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>  Using cached scs-2.1.2.tar.gz (3.5 MB)
-Collecting ecos&gt;=2
-  Using cached ecos-2.0.7.post1.tar.gz (126 kB)
-Requirement already satisfied: numpy&gt;=1.15 in c:\users\egces\anaconda3\lib\site-packages (from cvxpy) (1.19.2)
-Requirement already satisfied: future in c:\users\egces\anaconda3\lib\site-packages (from osqp&gt;=0.4.1-&gt;cvxpy) (0.18.2)
-Building wheels for collected packages: scs, ecos
-  Building wheel for scs (setup.py): started
-  Building wheel for scs (setup.py): finished with status &#39;error&#39;
-  Running setup.py clean for scs
-  Building wheel for ecos (setup.py): started
-  Building wheel for ecos (setup.py): finished with status &#39;error&#39;
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>  Namespace(blas64=False, extraverbose=False, float32=False, gpu=False, int32=False, scs=False)
-  running bdist_wheel
-  running build
-  running build_py
-  creating build
-  creating build\lib.win-amd64-3.8
-  creating build\lib.win-amd64-3.8\scs
-  copying src\__init__.py -&gt; build\lib.win-amd64-3.8\scs
-  running build_ext
-  blas_mkl_info:
-      libraries = [&#39;mkl_rt&#39;]
-      library_dirs = [&#39;C:/Users/egces/anaconda3\\Library\\lib&#39;]
-      define_macros = [(&#39;SCIPY_MKL_H&#39;, None), (&#39;HAVE_CBLAS&#39;, None)]
-      include_dirs = [&#39;C:/Users/egces/anaconda3\\Library\\include&#39;]
-  blas_opt_info:
-      libraries = [&#39;mkl_rt&#39;]
-      library_dirs = [&#39;C:/Users/egces/anaconda3\\Library\\lib&#39;]
-      define_macros = [(&#39;SCIPY_MKL_H&#39;, None), (&#39;HAVE_CBLAS&#39;, None)]
-      include_dirs = [&#39;C:/Users/egces/anaconda3\\Library\\include&#39;]
-  lapack_mkl_info:
-      libraries = [&#39;mkl_rt&#39;]
-      library_dirs = [&#39;C:/Users/egces/anaconda3\\Library\\lib&#39;]
-      define_macros = [(&#39;SCIPY_MKL_H&#39;, None), (&#39;HAVE_CBLAS&#39;, None)]
-      include_dirs = [&#39;C:/Users/egces/anaconda3\\Library\\include&#39;]
-  lapack_opt_info:
-      libraries = [&#39;mkl_rt&#39;]
-      library_dirs = [&#39;C:/Users/egces/anaconda3\\Library\\lib&#39;]
-      define_macros = [(&#39;SCIPY_MKL_H&#39;, None), (&#39;HAVE_CBLAS&#39;, None)]
-      include_dirs = [&#39;C:/Users/egces/anaconda3\\Library\\include&#39;]
-  Could not locate executable g77
-  Could not locate executable f77
-  Could not locate executable ifort
-  Could not locate executable ifl
-  Could not locate executable f90
-  Could not locate executable DF
-  Could not locate executable efl
-  Could not locate executable gfortran
-  Could not locate executable f95
-  Could not locate executable g95
-  Could not locate executable efort
-  Could not locate executable efc
-  Could not locate executable flang
-  don&#39;t know how to compile Fortran code on platform &#39;nt&#39;
-  C:\Users\egces\anaconda3\lib\site-packages\numpy\distutils\system_info.py:1914: UserWarning:
-      Optimized (vendor) Blas libraries are not found.
-      Falls back to netlib Blas library which has worse performance.
-      A better performance should be easily gained by switching
-      Blas library.
-    if self._calc_info(blas):
-  C:\Users\egces\anaconda3\lib\site-packages\numpy\distutils\system_info.py:1914: UserWarning:
-      Blas (http://www.netlib.org/blas/) libraries not found.
-      Directories to search for the libraries can be specified in the
-      numpy/distutils/site.cfg file (section [blas]) or by setting
-      the BLAS environment variable.
-    if self._calc_info(blas):
-  C:\Users\egces\anaconda3\lib\site-packages\numpy\distutils\system_info.py:1914: UserWarning:
-      Blas (http://www.netlib.org/blas/) sources not found.
-      Directories to search for the sources can be specified in the
-      numpy/distutils/site.cfg file (section [blas_src]) or by setting
-      the BLAS_SRC environment variable.
-    if self._calc_info(blas):
-  C:\Users\egces\anaconda3\lib\site-packages\numpy\distutils\system_info.py:1748: UserWarning:
-      Lapack (http://www.netlib.org/lapack/) libraries not found.
-      Directories to search for the libraries can be specified in the
-      numpy/distutils/site.cfg file (section [lapack]) or by setting
-      the LAPACK environment variable.
-    return getattr(self, &#39;_calc_info_{}&#39;.format(name))()
-  C:\Users\egces\anaconda3\lib\site-packages\numpy\distutils\system_info.py:1748: UserWarning:
-      Lapack (http://www.netlib.org/lapack/) sources not found.
-      Directories to search for the sources can be specified in the
-      numpy/distutils/site.cfg file (section [lapack_src]) or by setting
-      the LAPACK_SRC environment variable.
-    return getattr(self, &#39;_calc_info_{}&#39;.format(name))()
-  error: Microsoft Visual C++ 14.0 or greater is required. Get it with &#34;Microsoft C++ Build Tools&#34;: https://visualstudio.microsoft.com/visual-cpp-build-tools/
-  {}
-  {}
-  ----------------------------------------
-  ERROR: Failed building wheel for scs
-  ERROR: Command errored out with exit status 1:
-   command: &#39;C:\Users\egces\anaconda3\python.exe&#39; -u -c &#39;import sys, setuptools, tokenize; sys.argv[0] = &#39;&#34;&#39;&#34;&#39;C:\\Users\\egces\\AppData\\Local\\Temp\\pip-install-beaef_ft\\ecos\\setup.py&#39;&#34;&#39;&#34;&#39;; __file__=&#39;&#34;&#39;&#34;&#39;C:\\Users\\egces\\AppData\\Local\\Temp\\pip-install-beaef_ft\\ecos\\setup.py&#39;&#34;&#39;&#34;&#39;;f=getattr(tokenize, &#39;&#34;&#39;&#34;&#39;open&#39;&#34;&#39;&#34;&#39;, open)(__file__);code=f.read().replace(&#39;&#34;&#39;&#34;&#39;\r\n&#39;&#34;&#39;&#34;&#39;, &#39;&#34;&#39;&#34;&#39;\n&#39;&#34;&#39;&#34;&#39;);f.close();exec(compile(code, __file__, &#39;&#34;&#39;&#34;&#39;exec&#39;&#34;&#39;&#34;&#39;))&#39; bdist_wheel -d &#39;C:\Users\egces\AppData\Local\Temp\pip-wheel-7ifxmpsu&#39;
-       cwd: C:\Users\egces\AppData\Local\Temp\pip-install-beaef_ft\ecos\
-  Complete output (12 lines):
-  running bdist_wheel
-  running build
-  running build_py
-  creating build
-  creating build\lib.win-amd64-3.8
-  creating build\lib.win-amd64-3.8\ecos
-  copying src\ecos\ecos.py -&gt; build\lib.win-amd64-3.8\ecos
-  copying src\ecos\version.py -&gt; build\lib.win-amd64-3.8\ecos
-  copying src\ecos\__init__.py -&gt; build\lib.win-amd64-3.8\ecos
-  running build_ext
-  building &#39;_ecos&#39; extension
-  error: Microsoft Visual C++ 14.0 or greater is required. Get it with &#34;Microsoft C++ Build Tools&#34;: https://visualstudio.microsoft.com/visual-cpp-build-tools/
-  ----------------------------------------
-  ERROR: Failed building wheel for ecos
-    ERROR: Command errored out with exit status 1:
-     command: &#39;C:\Users\egces\anaconda3\python.exe&#39; -u -c &#39;import sys, setuptools, tokenize; sys.argv[0] = &#39;&#34;&#39;&#34;&#39;C:\\Users\\egces\\AppData\\Local\\Temp\\pip-install-beaef_ft\\scs\\setup.py&#39;&#34;&#39;&#34;&#39;; __file__=&#39;&#34;&#39;&#34;&#39;C:\\Users\\egces\\AppData\\Local\\Temp\\pip-install-beaef_ft\\scs\\setup.py&#39;&#34;&#39;&#34;&#39;;f=getattr(tokenize, &#39;&#34;&#39;&#34;&#39;open&#39;&#34;&#39;&#34;&#39;, open)(__file__);code=f.read().replace(&#39;&#34;&#39;&#34;&#39;\r\n&#39;&#34;&#39;&#34;&#39;, &#39;&#34;&#39;&#34;&#39;\n&#39;&#34;&#39;&#34;&#39;);f.close();exec(compile(code, __file__, &#39;&#34;&#39;&#34;&#39;exec&#39;&#34;&#39;&#34;&#39;))&#39; install --record &#39;C:\Users\egces\AppData\Local\Temp\pip-record-v28qgz6n\install-record.txt&#39; --single-version-externally-managed --compile --install-headers &#39;C:\Users\egces\anaconda3\Include\scs&#39;
-         cwd: C:\Users\egces\AppData\Local\Temp\pip-install-beaef_ft\scs\
-    Complete output (76 lines):
-    Namespace(blas64=False, extraverbose=False, float32=False, gpu=False, int32=False, scs=False)
-    running install
-    running build
-    running build_py
-    creating build
-    creating build\lib.win-amd64-3.8
-    creating build\lib.win-amd64-3.8\scs
-    copying src\__init__.py -&gt; build\lib.win-amd64-3.8\scs
-    running build_ext
-    blas_mkl_info:
-        libraries = [&#39;mkl_rt&#39;]
-        library_dirs = [&#39;C:/Users/egces/anaconda3\\Library\\lib&#39;]
-        define_macros = [(&#39;SCIPY_MKL_H&#39;, None), (&#39;HAVE_CBLAS&#39;, None)]
-        include_dirs = [&#39;C:/Users/egces/anaconda3\\Library\\include&#39;]
-    blas_opt_info:
-        libraries = [&#39;mkl_rt&#39;]
-        library_dirs = [&#39;C:/Users/egces/anaconda3\\Library\\lib&#39;]
-        define_macros = [(&#39;SCIPY_MKL_H&#39;, None), (&#39;HAVE_CBLAS&#39;, None)]
-        include_dirs = [&#39;C:/Users/egces/anaconda3\\Library\\include&#39;]
-    lapack_mkl_info:
-        libraries = [&#39;mkl_rt&#39;]
-        library_dirs = [&#39;C:/Users/egces/anaconda3\\Library\\lib&#39;]
-        define_macros = [(&#39;SCIPY_MKL_H&#39;, None), (&#39;HAVE_CBLAS&#39;, None)]
-        include_dirs = [&#39;C:/Users/egces/anaconda3\\Library\\include&#39;]
-    lapack_opt_info:
-        libraries = [&#39;mkl_rt&#39;]
-        library_dirs = [&#39;C:/Users/egces/anaconda3\\Library\\lib&#39;]
-        define_macros = [(&#39;SCIPY_MKL_H&#39;, None), (&#39;HAVE_CBLAS&#39;, None)]
-        include_dirs = [&#39;C:/Users/egces/anaconda3\\Library\\include&#39;]
-    Could not locate executable g77
-    Could not locate executable f77
-    Could not locate executable ifort
-    Could not locate executable ifl
-    Could not locate executable f90
-    Could not locate executable DF
-    Could not locate executable efl
-    Could not locate executable gfortran
-    Could not locate executable f95
-    Could not locate executable g95
-    Could not locate executable efort
-    Could not locate executable efc
-    Could not locate executable flang
-    don&#39;t know how to compile Fortran code on platform &#39;nt&#39;
-    C:\Users\egces\anaconda3\lib\site-packages\numpy\distutils\system_info.py:1914: UserWarning:
-        Optimized (vendor) Blas libraries are not found.
-        Falls back to netlib Blas library which has worse performance.
-        A better performance should be easily gained by switching
-        Blas library.
-      if self._calc_info(blas):
-    C:\Users\egces\anaconda3\lib\site-packages\numpy\distutils\system_info.py:1914: UserWarning:
-        Blas (http://www.netlib.org/blas/) libraries not found.
-        Directories to search for the libraries can be specified in the
-        numpy/distutils/site.cfg file (section [blas]) or by setting
-        the BLAS environment variable.
-      if self._calc_info(blas):
-    C:\Users\egces\anaconda3\lib\site-packages\numpy\distutils\system_info.py:1914: UserWarning:
-        Blas (http://www.netlib.org/blas/) sources not found.
-        Directories to search for the sources can be specified in the
-        numpy/distutils/site.cfg file (section [blas_src]) or by setting
-        the BLAS_SRC environment variable.
-      if self._calc_info(blas):
-    C:\Users\egces\anaconda3\lib\site-packages\numpy\distutils\system_info.py:1748: UserWarning:
-        Lapack (http://www.netlib.org/lapack/) libraries not found.
-        Directories to search for the libraries can be specified in the
-        numpy/distutils/site.cfg file (section [lapack]) or by setting
-        the LAPACK environment variable.
-      return getattr(self, &#39;_calc_info_{}&#39;.format(name))()
-    C:\Users\egces\anaconda3\lib\site-packages\numpy\distutils\system_info.py:1748: UserWarning:
-        Lapack (http://www.netlib.org/lapack/) sources not found.
-        Directories to search for the sources can be specified in the
-        numpy/distutils/site.cfg file (section [lapack_src]) or by setting
-        the LAPACK_SRC environment variable.
-      return getattr(self, &#39;_calc_info_{}&#39;.format(name))()
-    error: Microsoft Visual C++ 14.0 or greater is required. Get it with &#34;Microsoft C++ Build Tools&#34;: https://visualstudio.microsoft.com/visual-cpp-build-tools/
-    {}
-    {}
-    ----------------------------------------
-ERROR: Command errored out with exit status 1: &#39;C:\Users\egces\anaconda3\python.exe&#39; -u -c &#39;import sys, setuptools, tokenize; sys.argv[0] = &#39;&#34;&#39;&#34;&#39;C:\\Users\\egces\\AppData\\Local\\Temp\\pip-install-beaef_ft\\scs\\setup.py&#39;&#34;&#39;&#34;&#39;; __file__=&#39;&#34;&#39;&#34;&#39;C:\\Users\\egces\\AppData\\Local\\Temp\\pip-install-beaef_ft\\scs\\setup.py&#39;&#34;&#39;&#34;&#39;;f=getattr(tokenize, &#39;&#34;&#39;&#34;&#39;open&#39;&#34;&#39;&#34;&#39;, open)(__file__);code=f.read().replace(&#39;&#34;&#39;&#34;&#39;\r\n&#39;&#34;&#39;&#34;&#39;, &#39;&#34;&#39;&#34;&#39;\n&#39;&#34;&#39;&#34;&#39;);f.close();exec(compile(code, __file__, &#39;&#34;&#39;&#34;&#39;exec&#39;&#34;&#39;&#34;&#39;))&#39; install --record &#39;C:\Users\egces\AppData\Local\Temp\pip-record-v28qgz6n\install-record.txt&#39; --single-version-externally-managed --compile --install-headers &#39;C:\Users\egces\anaconda3\Include\scs&#39; Check the logs for full command output.
-</pre>
-</div>
 </div>
 
 </div>
@@ -18280,10 +18583,10 @@ ERROR: Command errored out with exit status 1: &#39;C:\Users\egces\anaconda3\pyt
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[65]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[161]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">cvxpy</span> <span class="k">as</span> <span class="nn">cp</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Y_train</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 
      </div>
@@ -18299,34 +18602,89 @@ ERROR: Command errored out with exit status 1: &#39;C:\Users\egces\anaconda3\pyt
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[161]:</div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>  Running setup.py clean for ecos
-Failed to build scs ecos
-Installing collected packages: osqp, scs, ecos, cvxpy
-    Running setup.py install for scs: started
-    Running setup.py install for scs: finished with status &#39;error&#39;
-</pre>
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>(42216,)</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[160]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_test</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+
+     </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
 
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[160]:</div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">ModuleNotFoundError</span>                       Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-65-b9466877789b&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span><span class="ansi-green-intense-fg ansi-bold">import</span> cvxpy <span class="ansi-green-intense-fg ansi-bold">as</span> cp
 
-<span class="ansi-red-intense-fg ansi-bold">ModuleNotFoundError</span>: No module named &#39;cvxpy&#39;</pre>
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>(744, 26)</pre>
 </div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[163]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Y_test</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[163]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>(744,)</pre>
+</div>
+
 </div>
 
 </div>
@@ -18336,17 +18694,23 @@ Installing collected packages: osqp, scs, ecos, cvxpy
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[111]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">loss_fn</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">beta</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">cp</span><span class="o">.</span><span class="n">norm2</span><span class="p">(</span><span class="n">X</span> <span class="o">@</span> <span class="n">beta</span> <span class="o">-</span> <span class="n">Y</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+    <span class="k">return</span> <span class="n">cp</span><span class="o">.</span><span class="n">pnorm</span><span class="p">(</span><span class="n">X</span> <span class="o">@</span> <span class="n">beta</span> <span class="o">-</span> <span class="n">Y</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
 
 <span class="k">def</span> <span class="nf">regularizer</span><span class="p">(</span><span class="n">beta</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">cp</span><span class="o">.</span><span class="n">norm1</span><span class="p">(</span><span class="n">beta</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">objective_fn</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">beta</span><span class="p">,</span> <span class="n">lambd</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">loss_fn</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">beta</span><span class="p">)</span> <span class="o">+</span> <span class="n">lambd</span> <span class="o">*</span> <span class="n">regularizer</span><span class="p">(</span><span class="n">beta</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">new_loss</span><span class="p">(</span><span class="n">l1</span><span class="p">,</span> <span class="n">beta</span><span class="p">):</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">beta</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+        <span class="n">total</span><span class="o">+=</span> <span class="n">beta</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="n">beta</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">l1</span><span class="o">*</span><span class="n">total</span>
+        
+<span class="k">def</span> <span class="nf">objective_fn</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">beta</span><span class="p">,</span> <span class="n">l1</span><span class="p">,</span> <span class="n">l2</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">loss_fn</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">beta</span><span class="p">)</span> <span class="o">+</span> <span class="n">l2</span> <span class="o">*</span> <span class="n">regularizer</span><span class="p">(</span><span class="n">beta</span><span class="p">)</span> <span class="o">+</span> <span class="n">new_loss</span><span class="p">(</span><span class="n">l1</span><span class="p">,</span> <span class="n">beta</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">mse</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">beta</span><span class="p">):</span>
     <span class="k">return</span> <span class="p">(</span><span class="mf">1.0</span> <span class="o">/</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">*</span> <span class="n">loss_fn</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">beta</span><span class="p">)</span><span class="o">.</span><span class="n">value</span>
@@ -18357,22 +18721,23 @@ Installing collected packages: osqp, scs, ecos, cvxpy
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[113]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">beta</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-<span class="n">lambd</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">Parameter</span><span class="p">(</span><span class="n">nonneg</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">problem</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">Problem</span><span class="p">(</span><span class="n">cp</span><span class="o">.</span><span class="n">Minimize</span><span class="p">(</span><span class="n">objective_fn</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">,</span> <span class="n">beta</span><span class="p">,</span> <span class="n">lambd</span><span class="p">)))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">beta</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="mi">26</span><span class="p">)</span>
+<span class="n">l1</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">Parameter</span><span class="p">(</span><span class="n">nonneg</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">l2</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">Parameter</span><span class="p">(</span><span class="n">nonneg</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">problem</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">Problem</span><span class="p">(</span><span class="n">cp</span><span class="o">.</span><span class="n">Minimize</span><span class="p">(</span><span class="n">objective_fn</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">,</span> <span class="n">beta</span><span class="p">,</span> <span class="n">l1</span><span class="p">,</span> <span class="n">l2</span><span class="p">)))</span>
 
 <span class="n">lambd_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
 <span class="n">train_errors</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">test_errors</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">beta_values</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">lambd_values</span><span class="p">:</span>
-    <span class="n">lambd</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">v</span>
+    <span class="n">l1</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">v</span>
     <span class="n">problem</span><span class="o">.</span><span class="n">solve</span><span class="p">()</span>
     <span class="n">train_errors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mse</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">,</span> <span class="n">beta</span><span class="p">))</span>
     <span class="n">test_errors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mse</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">Y_test</span><span class="p">,</span> <span class="n">beta</span><span class="p">))</span>
@@ -18384,22 +18749,64 @@ Installing collected packages: osqp, scs, ecos, cvxpy
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ParameterError</span>                            Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-113-d3d4c7f615b5&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">     10</span> <span class="ansi-green-fg">for</span> v <span class="ansi-green-fg">in</span> lambd_values<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">     11</span>     lambd<span class="ansi-blue-fg">.</span>value <span class="ansi-blue-fg">=</span> v
+<span class="ansi-green-fg">---&gt; 12</span><span class="ansi-red-fg">     </span>problem<span class="ansi-blue-fg">.</span>solve<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     13</span>     train_errors<span class="ansi-blue-fg">.</span>append<span class="ansi-blue-fg">(</span>mse<span class="ansi-blue-fg">(</span>X_train<span class="ansi-blue-fg">,</span> Y_train<span class="ansi-blue-fg">,</span> beta<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     14</span>     test_errors<span class="ansi-blue-fg">.</span>append<span class="ansi-blue-fg">(</span>mse<span class="ansi-blue-fg">(</span>X_test<span class="ansi-blue-fg">,</span> Y_test<span class="ansi-blue-fg">,</span> beta<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">/opt/anaconda3/lib/python3.8/site-packages/cvxpy/problems/problem.py</span> in <span class="ansi-cyan-fg">solve</span><span class="ansi-blue-fg">(self, *args, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">    399</span>         <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    400</span>             solve_func <span class="ansi-blue-fg">=</span> Problem<span class="ansi-blue-fg">.</span>_solve
+<span class="ansi-green-fg">--&gt; 401</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">return</span> solve_func<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    402</span> 
+<span class="ansi-green-intense-fg ansi-bold">    403</span>     <span class="ansi-blue-fg">@</span>classmethod
+
+<span class="ansi-green-fg">/opt/anaconda3/lib/python3.8/site-packages/cvxpy/problems/problem.py</span> in <span class="ansi-cyan-fg">_solve</span><span class="ansi-blue-fg">(self, solver, warm_start, verbose, gp, qcp, requires_grad, enforce_dpp, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">    774</span>         <span class="ansi-green-fg">for</span> parameter <span class="ansi-green-fg">in</span> self<span class="ansi-blue-fg">.</span>parameters<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    775</span>             <span class="ansi-green-fg">if</span> parameter<span class="ansi-blue-fg">.</span>value <span class="ansi-green-fg">is</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 776</span><span class="ansi-red-fg">                 raise error.ParameterError(
+</span><span class="ansi-green-intense-fg ansi-bold">    777</span>                     <span class="ansi-blue-fg">&#34;A Parameter (whose name is &#39;%s&#39;) does not have a value &#34;</span>
+<span class="ansi-green-intense-fg ansi-bold">    778</span>                     <span class="ansi-blue-fg">&#34;associated with it; all Parameter objects must have &#34;</span>
+
+<span class="ansi-red-fg">ParameterError</span>: A Parameter (whose name is &#39;param210&#39;) does not have a value associated with it; all Parameter objects must have values before solving a problem.</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="FINAL-PART">FINAL PART<a class="anchor-link" href="#FINAL-PART">&#182;</a></h1><h3 id="Comparison-of-the-results">Comparison of the results<a class="anchor-link" href="#Comparison-of-the-results">&#182;</a></h3>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[126]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">plot_train_test_errors</span><span class="p">(</span><span class="n">train_errors</span><span class="p">,</span> <span class="n">test_errors</span><span class="p">,</span> <span class="n">lambd_values</span><span class="p">):</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">lambd_values</span><span class="p">,</span> <span class="n">train_errors</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Train error&quot;</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">lambd_values</span><span class="p">,</span> <span class="n">test_errors</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Test error&quot;</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">xscale</span><span class="p">(</span><span class="s2">&quot;log&quot;</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s2">&quot;upper left&quot;</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$\lambda$&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Mean Squared Error (MSE)&quot;</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-
-<span class="n">plot_train_test_errors</span><span class="p">(</span><span class="n">train_errors</span><span class="p">,</span> <span class="n">test_errors</span><span class="p">,</span> <span class="n">lambd_values</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">part3</span> <span class="o">=</span> <span class="n">results</span><span class="p">[</span><span class="s2">&quot;MAPE&quot;</span><span class="p">]</span>
+<span class="n">part4_2</span> <span class="o">=</span> <span class="n">mapes_2</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+<span class="n">part4_7</span> <span class="o">=</span> <span class="n">mapes_7</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -18410,19 +18817,10 @@ Installing collected packages: osqp, scs, ecos, cvxpy
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[133]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">plot_regularization_path</span><span class="p">(</span><span class="n">lambd_values</span><span class="p">,</span> <span class="n">beta_values</span><span class="p">):</span>
-    <span class="n">num_coeffs</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">beta_values</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_coeffs</span><span class="p">):</span>
-        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">lambd_values</span><span class="p">,</span> <span class="p">[</span><span class="n">wi</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">wi</span> <span class="ow">in</span> <span class="n">beta_values</span><span class="p">])</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$\lambda$&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">xscale</span><span class="p">(</span><span class="s2">&quot;log&quot;</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Regularization Path&quot;</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-
-<span class="n">plot_regularization_path</span><span class="p">(</span><span class="n">lambd_values</span><span class="p">,</span> <span class="n">beta_values</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">DF</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">24</span><span class="p">),</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;part1_48&quot;</span><span class="p">,</span><span class="s2">&quot;part1_168&quot;</span><span class="p">,</span><span class="s2">&quot;part2&quot;</span><span class="p">,</span><span class="s2">&quot;part3&quot;</span><span class="p">,</span><span class="s2">&quot;part4_2day&quot;</span><span class="p">,</span><span class="s2">&quot;part4_7day&quot;</span><span class="p">])</span>
 </pre></div>
 
      </div>
@@ -18433,10 +18831,15 @@ Installing collected packages: osqp, scs, ecos, cvxpy
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[134]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">DF</span><span class="p">[</span><span class="s2">&quot;part1_48&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Lag_48_mape</span>
+<span class="n">DF</span><span class="p">[</span><span class="s2">&quot;part1_168&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Lag_168_mape</span>
+<span class="n">DF</span><span class="p">[</span><span class="s2">&quot;part2&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">lr_mape</span>
+<span class="n">DF</span><span class="p">[</span><span class="s2">&quot;part3&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">part3</span>
+<span class="n">DF</span><span class="p">[</span><span class="s2">&quot;part4_2day&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">part4_2</span>
+<span class="n">DF</span><span class="p">[</span><span class="s2">&quot;part4_7day&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">part4_7</span>
 </pre></div>
 
      </div>
@@ -18444,13 +18847,13 @@ Installing collected packages: osqp, scs, ecos, cvxpy
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[135]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">DF</span>
 </pre></div>
 
      </div>
@@ -18458,6 +18861,385 @@ Installing collected packages: osqp, scs, ecos, cvxpy
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[135]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>part1_48</th>
+      <th>part1_168</th>
+      <th>part2</th>
+      <th>part3</th>
+      <th>part4_2day</th>
+      <th>part4_7day</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>8.060315</td>
+      <td>3.449188</td>
+      <td>4.228027</td>
+      <td>3.262965</td>
+      <td>1.722715</td>
+      <td>2.318775</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>8.060315</td>
+      <td>3.449188</td>
+      <td>4.228027</td>
+      <td>3.283087</td>
+      <td>1.852186</td>
+      <td>2.335613</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>8.060315</td>
+      <td>3.449188</td>
+      <td>4.228027</td>
+      <td>3.418696</td>
+      <td>1.806109</td>
+      <td>2.405544</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>8.060315</td>
+      <td>3.449188</td>
+      <td>4.228027</td>
+      <td>3.202714</td>
+      <td>1.691619</td>
+      <td>2.134479</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>8.060315</td>
+      <td>3.449188</td>
+      <td>4.228027</td>
+      <td>3.183023</td>
+      <td>1.706308</td>
+      <td>2.161487</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>8.060315</td>
+      <td>3.449188</td>
+      <td>4.228027</td>
+      <td>3.187450</td>
+      <td>1.657822</td>
+      <td>2.175753</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>8.060315</td>
+      <td>3.449188</td>
+      <td>4.228027</td>
+      <td>3.148057</td>
+      <td>1.845459</td>
+      <td>2.316991</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>8.060315</td>
+      <td>3.449188</td>
+      <td>4.228027</td>
+      <td>3.776119</td>
+      <td>2.289537</td>
+      <td>2.436589</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>8.060315</td>
+      <td>3.449188</td>
+      <td>4.228027</td>
+      <td>4.672350</td>
+      <td>3.779430</td>
+      <td>3.190262</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>8.060315</td>
+      <td>3.449188</td>
+      <td>4.228027</td>
+      <td>5.484825</td>
+      <td>4.704077</td>
+      <td>4.104135</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>8.060315</td>
+      <td>3.449188</td>
+      <td>4.228027</td>
+      <td>6.087343</td>
+      <td>5.038983</td>
+      <td>4.624844</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>8.060315</td>
+      <td>3.449188</td>
+      <td>4.228027</td>
+      <td>6.273932</td>
+      <td>5.184482</td>
+      <td>4.796645</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>8.060315</td>
+      <td>3.449188</td>
+      <td>4.228027</td>
+      <td>6.544300</td>
+      <td>5.438270</td>
+      <td>4.951676</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>8.060315</td>
+      <td>3.449188</td>
+      <td>4.228027</td>
+      <td>6.684703</td>
+      <td>5.314132</td>
+      <td>5.109411</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>8.060315</td>
+      <td>3.449188</td>
+      <td>4.228027</td>
+      <td>6.481529</td>
+      <td>5.324971</td>
+      <td>4.717990</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>8.060315</td>
+      <td>3.449188</td>
+      <td>4.228027</td>
+      <td>6.083015</td>
+      <td>5.002040</td>
+      <td>4.186758</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>8.060315</td>
+      <td>3.449188</td>
+      <td>4.228027</td>
+      <td>5.147396</td>
+      <td>4.327206</td>
+      <td>3.257287</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>8.060315</td>
+      <td>3.449188</td>
+      <td>4.228027</td>
+      <td>4.608824</td>
+      <td>3.432745</td>
+      <td>2.709085</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>8.060315</td>
+      <td>3.449188</td>
+      <td>4.228027</td>
+      <td>3.736631</td>
+      <td>2.434353</td>
+      <td>2.023101</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>8.060315</td>
+      <td>3.449188</td>
+      <td>4.228027</td>
+      <td>3.433788</td>
+      <td>2.305876</td>
+      <td>1.877099</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>8.060315</td>
+      <td>3.449188</td>
+      <td>4.228027</td>
+      <td>3.164353</td>
+      <td>2.152574</td>
+      <td>1.953702</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>8.060315</td>
+      <td>3.449188</td>
+      <td>4.228027</td>
+      <td>3.166258</td>
+      <td>2.152859</td>
+      <td>1.994372</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>8.060315</td>
+      <td>3.449188</td>
+      <td>4.228027</td>
+      <td>3.166973</td>
+      <td>2.136479</td>
+      <td>1.849475</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>8.060315</td>
+      <td>3.449188</td>
+      <td>4.228027</td>
+      <td>3.386736</td>
+      <td>2.325372</td>
+      <td>2.104226</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[136]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">DF</span><span class="o">.</span><span class="n">boxplot</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[136]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>&lt;AxesSubplot:&gt;</pre>
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedImage jp-OutputArea-output ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[143]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">swarmplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">DF</span> <span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[143]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>&lt;AxesSubplot:&gt;</pre>
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedImage jp-OutputArea-output ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>It can be seen that the solution in part 4 gave the best results. The best MAPE values are found by a 2 day lag, however, using 7 day lag gives MAPE values that are close together with less standard deviation.</p>
+
+</div>
 </div>
 </body>
 
