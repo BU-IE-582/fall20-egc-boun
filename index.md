@@ -9,3 +9,11 @@
 ### [Homework2](HW2/HW2.html) for my Homework2
 
 ### [Homework3](HW3/HW3.html) for my Homework3
+
+### [Homework4.a](HW4/spambase/Classification3.html) for my spam analysis (HW4)
+
+### [Homework4.b](HW4/default/Classification2.html) for my default payment analysis (HW4)
+
+### [Homework4.c](HW4/urban land cover/Classification1.html) for my urban land cover analysis (HW4)
+
+### [Homework4.d](HW4/communities crime/Regression.html) for my crime percentage in communities analysis (HW4)
