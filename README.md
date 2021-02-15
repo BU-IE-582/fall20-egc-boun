@@ -15,3 +15,5 @@ This is my [Progress Journal](https://bu-ie-582.github.io/fall20-egc-boun/)
 [***My Homework 4c***](HW4/urban_land_cover/Classification.html)
 
 [***My Homework 4d***](HW4/communities_crime/Regression.html)
+
+[***My Final***](Final/IE_582_PROJECT_FINAL.html)
