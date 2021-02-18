@@ -17,3 +17,5 @@ This is my [Progress Journal](https://bu-ie-582.github.io/fall20-egc-boun/)
 [***My Homework 4d***](HW4/communities_crime/Regression.html)
 
 [***My Final***](Final/IE_582_PROJECT_FINAL.html)
+
+[***My Homework 5***](https://github.com/BU-IE-582/fall20-egc-boun/blob/main/HW5/HW5.html)
