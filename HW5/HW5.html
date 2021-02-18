@@ -14393,8 +14393,8 @@ Z). It has the same format as the training data.</p>
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">y_train</span> <span class="o">=</span> <span class="n">TRAIN</span><span class="p">[</span><span class="s2">&quot;class&quot;</span><span class="p">]</span>
 <span class="n">X_train</span> <span class="o">=</span> <span class="n">TRAIN</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&quot;class&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
 
-<span class="n">y_test</span> <span class="o">=</span> <span class="n">TRAIN</span><span class="p">[</span><span class="s2">&quot;class&quot;</span><span class="p">]</span>
-<span class="n">X_test</span> <span class="o">=</span> <span class="n">TRAIN</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&quot;class&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">y_test</span> <span class="o">=</span> <span class="n">TEST</span><span class="p">[</span><span class="s2">&quot;class&quot;</span><span class="p">]</span>
+<span class="n">X_test</span> <span class="o">=</span> <span class="n">TEST</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&quot;class&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14484,12 +14484,12 @@ and predicted labels. In addition, quote the runtime and accuracy for your resul
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
 <pre>[Parallel(n_jobs=-1)]: Using backend LokyBackend with 8 concurrent workers.
-[Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed:    2.2s
-[Parallel(n_jobs=-1)]: Done  56 tasks      | elapsed:   10.8s
-[Parallel(n_jobs=-1)]: Done 146 tasks      | elapsed:   24.2s
-[Parallel(n_jobs=-1)]: Done 272 tasks      | elapsed:   45.8s
-[Parallel(n_jobs=-1)]: Done 434 tasks      | elapsed:  1.2min
-[Parallel(n_jobs=-1)]: Done 632 tasks      | elapsed:  1.8min
+[Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed:    2.7s
+[Parallel(n_jobs=-1)]: Done  56 tasks      | elapsed:   11.8s
+[Parallel(n_jobs=-1)]: Done 146 tasks      | elapsed:   26.7s
+[Parallel(n_jobs=-1)]: Done 272 tasks      | elapsed:   53.8s
+[Parallel(n_jobs=-1)]: Done 434 tasks      | elapsed:  1.5min
+[Parallel(n_jobs=-1)]: Done 632 tasks      | elapsed:  2.1min
 </pre>
 </div>
 </div>
@@ -14513,7 +14513,7 @@ and predicted labels. In addition, quote the runtime and accuracy for your resul
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>[Parallel(n_jobs=-1)]: Done 800 out of 800 | elapsed:  2.2min finished
+<pre>[Parallel(n_jobs=-1)]: Done 800 out of 800 | elapsed:  2.6min finished
 </pre>
 </div>
 </div>
@@ -14593,10 +14593,10 @@ and predicted labels. In addition, quote the runtime and accuracy for your resul
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.100093</td>
-      <td>0.011334</td>
-      <td>0.150519</td>
-      <td>0.006382</td>
+      <td>0.100290</td>
+      <td>0.007602</td>
+      <td>0.185658</td>
+      <td>0.019051</td>
       <td>1</td>
       <td>1</td>
       <td>{'model__n_neighbors': 1, 'model__p': 1}</td>
@@ -14616,10 +14616,10 @@ and predicted labels. In addition, quote the runtime and accuracy for your resul
     </tr>
     <tr>
       <th>1</th>
-      <td>0.077792</td>
-      <td>0.020204</td>
-      <td>2.399456</td>
-      <td>0.061131</td>
+      <td>0.086008</td>
+      <td>0.015245</td>
+      <td>2.581896</td>
+      <td>0.104941</td>
       <td>1</td>
       <td>1.64</td>
       <td>{'model__n_neighbors': 1, 'model__p': 1.64}</td>
@@ -14639,10 +14639,10 @@ and predicted labels. In addition, quote the runtime and accuracy for your resul
     </tr>
     <tr>
       <th>8</th>
-      <td>0.065140</td>
-      <td>0.003802</td>
-      <td>0.137074</td>
-      <td>0.004623</td>
+      <td>0.072742</td>
+      <td>0.006049</td>
+      <td>0.157557</td>
+      <td>0.008540</td>
       <td>3</td>
       <td>1</td>
       <td>{'model__n_neighbors': 3, 'model__p': 1}</td>
@@ -14662,10 +14662,10 @@ and predicted labels. In addition, quote the runtime and accuracy for your resul
     </tr>
     <tr>
       <th>9</th>
-      <td>0.062999</td>
-      <td>0.003205</td>
-      <td>2.271475</td>
-      <td>0.024098</td>
+      <td>0.070441</td>
+      <td>0.007393</td>
+      <td>2.625242</td>
+      <td>0.138910</td>
       <td>3</td>
       <td>1.64</td>
       <td>{'model__n_neighbors': 3, 'model__p': 1.64}</td>
@@ -14685,10 +14685,10 @@ and predicted labels. In addition, quote the runtime and accuracy for your resul
     </tr>
     <tr>
       <th>12</th>
-      <td>0.062528</td>
-      <td>0.002613</td>
-      <td>0.136248</td>
-      <td>0.003310</td>
+      <td>0.064997</td>
+      <td>0.001719</td>
+      <td>0.145034</td>
+      <td>0.004236</td>
       <td>4</td>
       <td>1</td>
       <td>{'model__n_neighbors': 4, 'model__p': 1}</td>
@@ -14708,10 +14708,10 @@ and predicted labels. In addition, quote the runtime and accuracy for your resul
     </tr>
     <tr>
       <th>13</th>
-      <td>0.061381</td>
-      <td>0.003130</td>
-      <td>2.291586</td>
-      <td>0.024102</td>
+      <td>0.069190</td>
+      <td>0.004694</td>
+      <td>2.531186</td>
+      <td>0.058848</td>
       <td>4</td>
       <td>1.64</td>
       <td>{'model__n_neighbors': 4, 'model__p': 1.64}</td>
@@ -14731,10 +14731,10 @@ and predicted labels. In addition, quote the runtime and accuracy for your resul
     </tr>
     <tr>
       <th>16</th>
-      <td>0.063714</td>
-      <td>0.002908</td>
-      <td>0.137380</td>
-      <td>0.005108</td>
+      <td>0.072596</td>
+      <td>0.005061</td>
+      <td>0.158054</td>
+      <td>0.010494</td>
       <td>5</td>
       <td>1</td>
       <td>{'model__n_neighbors': 5, 'model__p': 1}</td>
@@ -14754,10 +14754,10 @@ and predicted labels. In addition, quote the runtime and accuracy for your resul
     </tr>
     <tr>
       <th>17</th>
-      <td>0.063974</td>
-      <td>0.001769</td>
-      <td>2.288398</td>
-      <td>0.023337</td>
+      <td>0.071557</td>
+      <td>0.007997</td>
+      <td>2.511516</td>
+      <td>0.036407</td>
       <td>5</td>
       <td>1.64</td>
       <td>{'model__n_neighbors': 5, 'model__p': 1.64}</td>
@@ -14777,10 +14777,10 @@ and predicted labels. In addition, quote the runtime and accuracy for your resul
     </tr>
     <tr>
       <th>20</th>
-      <td>0.063020</td>
-      <td>0.002559</td>
-      <td>0.137766</td>
-      <td>0.003346</td>
+      <td>0.069516</td>
+      <td>0.005141</td>
+      <td>0.146739</td>
+      <td>0.004669</td>
       <td>6</td>
       <td>1</td>
       <td>{'model__n_neighbors': 6, 'model__p': 1}</td>
@@ -14800,10 +14800,10 @@ and predicted labels. In addition, quote the runtime and accuracy for your resul
     </tr>
     <tr>
       <th>24</th>
-      <td>0.064625</td>
-      <td>0.003566</td>
-      <td>0.138997</td>
-      <td>0.003243</td>
+      <td>0.082911</td>
+      <td>0.018187</td>
+      <td>0.179835</td>
+      <td>0.025115</td>
       <td>7</td>
       <td>1</td>
       <td>{'model__n_neighbors': 7, 'model__p': 1}</td>
@@ -14889,8 +14889,8 @@ and predicted labels. In addition, quote the runtime and accuracy for your resul
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
 <pre>[Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed:    0.3s
-[Parallel(n_jobs=-1)]: Done  56 tasks      | elapsed:    1.4s
-[Parallel(n_jobs=-1)]: Done 146 tasks      | elapsed:    3.4s
+[Parallel(n_jobs=-1)]: Done  56 tasks      | elapsed:    1.7s
+[Parallel(n_jobs=-1)]: Done 146 tasks      | elapsed:    4.7s
 </pre>
 </div>
 </div>
@@ -14914,7 +14914,7 @@ and predicted labels. In addition, quote the runtime and accuracy for your resul
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>[Parallel(n_jobs=-1)]: Done 200 out of 200 | elapsed:    4.6s finished
+<pre>[Parallel(n_jobs=-1)]: Done 200 out of 200 | elapsed:    6.3s finished
 </pre>
 </div>
 </div>
@@ -14993,10 +14993,10 @@ and predicted labels. In addition, quote the runtime and accuracy for your resul
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.054442</td>
-      <td>0.005354</td>
-      <td>0.151310</td>
-      <td>0.016524</td>
+      <td>0.061849</td>
+      <td>0.008533</td>
+      <td>0.204072</td>
+      <td>0.018040</td>
       <td>1</td>
       <td>{'model__n_neighbors': 1}</td>
       <td>0.933333</td>
@@ -15015,10 +15015,10 @@ and predicted labels. In addition, quote the runtime and accuracy for your resul
     </tr>
     <tr>
       <th>1</th>
-      <td>0.043934</td>
-      <td>0.005112</td>
-      <td>0.125856</td>
-      <td>0.010647</td>
+      <td>0.066077</td>
+      <td>0.006003</td>
+      <td>0.159398</td>
+      <td>0.006801</td>
       <td>2</td>
       <td>{'model__n_neighbors': 2}</td>
       <td>0.922222</td>
@@ -15037,10 +15037,10 @@ and predicted labels. In addition, quote the runtime and accuracy for your resul
     </tr>
     <tr>
       <th>2</th>
-      <td>0.045985</td>
-      <td>0.008885</td>
-      <td>0.118116</td>
-      <td>0.004621</td>
+      <td>0.061042</td>
+      <td>0.003989</td>
+      <td>0.151152</td>
+      <td>0.003441</td>
       <td>3</td>
       <td>{'model__n_neighbors': 3}</td>
       <td>0.944444</td>
@@ -15059,10 +15059,10 @@ and predicted labels. In addition, quote the runtime and accuracy for your resul
     </tr>
     <tr>
       <th>3</th>
-      <td>0.047312</td>
-      <td>0.002588</td>
-      <td>0.121518</td>
-      <td>0.004448</td>
+      <td>0.061392</td>
+      <td>0.004508</td>
+      <td>0.152480</td>
+      <td>0.003988</td>
       <td>4</td>
       <td>{'model__n_neighbors': 4}</td>
       <td>0.933333</td>
@@ -15081,10 +15081,10 @@ and predicted labels. In addition, quote the runtime and accuracy for your resul
     </tr>
     <tr>
       <th>4</th>
-      <td>0.046803</td>
-      <td>0.003074</td>
-      <td>0.122041</td>
-      <td>0.004371</td>
+      <td>0.059251</td>
+      <td>0.004069</td>
+      <td>0.154537</td>
+      <td>0.006104</td>
       <td>5</td>
       <td>{'model__n_neighbors': 5}</td>
       <td>0.944444</td>
@@ -15103,10 +15103,10 @@ and predicted labels. In addition, quote the runtime and accuracy for your resul
     </tr>
     <tr>
       <th>5</th>
-      <td>0.046590</td>
-      <td>0.002436</td>
-      <td>0.124382</td>
-      <td>0.005917</td>
+      <td>0.053718</td>
+      <td>0.007539</td>
+      <td>0.151137</td>
+      <td>0.008635</td>
       <td>6</td>
       <td>{'model__n_neighbors': 6}</td>
       <td>0.933333</td>
@@ -15125,10 +15125,10 @@ and predicted labels. In addition, quote the runtime and accuracy for your resul
     </tr>
     <tr>
       <th>6</th>
-      <td>0.046213</td>
-      <td>0.003699</td>
-      <td>0.126798</td>
-      <td>0.004966</td>
+      <td>0.064524</td>
+      <td>0.009302</td>
+      <td>0.153909</td>
+      <td>0.008234</td>
       <td>7</td>
       <td>{'model__n_neighbors': 7}</td>
       <td>0.944444</td>
@@ -15147,10 +15147,10 @@ and predicted labels. In addition, quote the runtime and accuracy for your resul
     </tr>
     <tr>
       <th>7</th>
-      <td>0.047912</td>
-      <td>0.003939</td>
-      <td>0.119903</td>
-      <td>0.002031</td>
+      <td>0.056216</td>
+      <td>0.002601</td>
+      <td>0.150146</td>
+      <td>0.003750</td>
       <td>8</td>
       <td>{'model__n_neighbors': 8}</td>
       <td>0.944444</td>
@@ -15169,10 +15169,10 @@ and predicted labels. In addition, quote the runtime and accuracy for your resul
     </tr>
     <tr>
       <th>8</th>
-      <td>0.043830</td>
-      <td>0.002292</td>
-      <td>0.121429</td>
-      <td>0.003642</td>
+      <td>0.059692</td>
+      <td>0.005030</td>
+      <td>0.150094</td>
+      <td>0.020457</td>
       <td>9</td>
       <td>{'model__n_neighbors': 9}</td>
       <td>0.955556</td>
@@ -15191,10 +15191,10 @@ and predicted labels. In addition, quote the runtime and accuracy for your resul
     </tr>
     <tr>
       <th>9</th>
-      <td>0.047210</td>
-      <td>0.003056</td>
-      <td>0.119938</td>
-      <td>0.001762</td>
+      <td>0.056184</td>
+      <td>0.008875</td>
+      <td>0.183355</td>
+      <td>0.012947</td>
       <td>10</td>
       <td>{'model__n_neighbors': 10}</td>
       <td>0.944444</td>
@@ -15252,8 +15252,8 @@ and predicted labels. In addition, quote the runtime and accuracy for your resul
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>CPU times: user 172 ms, sys: 7.07 ms, total: 179 ms
-Wall time: 178 ms
+<pre>CPU times: user 5.22 s, sys: 75.8 ms, total: 5.3 s
+Wall time: 5.38 s
 </pre>
 </div>
 </div>
@@ -15267,14 +15267,14 @@ Wall time: 178 ms
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>array([[122,   0,   0,   0,   0,   0,   0,   0],
-       [  0, 108,   0,   0,   0,   0,   0,   0],
-       [  0,   0, 106,   0,   0,   0,   0,   0],
-       [  0,   0,   0, 110,   0,   0,   0,   0],
-       [  0,   0,   0,   0, 127,   0,   0,   0],
-       [  0,   0,   0,   0,   0, 111,   0,   0],
-       [  0,   0,   0,   0,   0,   0, 112,   0],
-       [  0,   0,   0,   0,   0,   0,   0, 100]])</pre>
+<pre>array([[432,   0,   0,   1,   0,   4,   0,   0],
+       [  1, 451,   0,   0,   0,   0,   0,   0],
+       [  2,   0, 417,   0,  16,  14,   5,   0],
+       [  3,   0,   0, 395,  41,   8,   0,   3],
+       [  3,   0,   9,   4, 416,   1,   0,   0],
+       [  3,   0,   6,  12,  15, 412,   0,   1],
+       [  0,   0,   3,   0,   0,   0, 444,   0],
+       [  0,   0,   0,   3,   1,   0,   0, 456]])</pre>
 </div>
 
 </div>
@@ -15311,7 +15311,7 @@ Wall time: 178 ms
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>1.0</pre>
+<pre>0.9556113902847572</pre>
 </div>
 
 </div>
@@ -15350,8 +15350,8 @@ Wall time: 178 ms
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>CPU times: user 961 ms, sys: 18.9 ms, total: 980 ms
-Wall time: 980 ms
+<pre>CPU times: user 4.09 s, sys: 96 ms, total: 4.19 s
+Wall time: 4.26 s
 </pre>
 </div>
 </div>
@@ -15365,14 +15365,14 @@ Wall time: 980 ms
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>array([[122,   0,   0,   0,   0,   0,   0,   0],
-       [  0, 108,   0,   0,   0,   0,   0,   0],
-       [  0,   0, 106,   0,   0,   0,   0,   0],
-       [  0,   0,   0, 110,   0,   0,   0,   0],
-       [  0,   0,   0,   0, 127,   0,   0,   0],
-       [  0,   0,   0,   0,   0, 111,   0,   0],
-       [  0,   0,   0,   0,   0,   0, 112,   0],
-       [  0,   0,   0,   0,   0,   0,   0, 100]])</pre>
+<pre>array([[429,   0,   0,   3,   0,   4,   1,   0],
+       [  1, 451,   0,   0,   0,   0,   0,   0],
+       [  2,   0, 415,   1,  17,  15,   4,   0],
+       [  5,   0,   0, 379,  49,  13,   0,   4],
+       [  2,   0,   9,   4, 415,   3,   0,   0],
+       [  6,   0,   5,  13,  19, 406,   0,   0],
+       [  0,   0,   3,   0,   0,   0, 444,   0],
+       [  0,   0,   0,   4,   2,   0,   0, 454]])</pre>
 </div>
 
 </div>
@@ -15409,7 +15409,7 @@ Wall time: 980 ms
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>1.0</pre>
+<pre>0.9472361809045227</pre>
 </div>
 
 </div>
@@ -15421,6 +15421,12 @@ Wall time: 980 ms
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>The accuracy of the first model where we have used manhattan distance seems to be better.</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>c) The observations from different axes are weighted equally if we compute the distance over each axis and
 sum them to obtain a final similarity measure. Is this reasonable? For example, we can compute the
 distance as below:
@@ -15428,7 +15434,7 @@ final_dist = w1<em>dist_x, + w2</em>dist_y + w3*dist_z
 where dist_x is the distance based on the acceleration only on X axis, dist_y is for Y axis and so on. Do
 you think weighting the distances over different axes to obtain a final similarity measure makes sense
 for classification? Why?</p>
-<p>I don't think this weighting will have a significant effect for classification.</p>
+<p>If the importance of one axis is more than the others, this weighing could have a positive effect.</p>
 
 </div>
 </div>
@@ -15648,7 +15654,7 @@ need to provide the necessary parameters as arguments to the corresponding funct
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
 <pre>[Parallel(n_jobs=-1)]: Using backend LokyBackend with 8 concurrent workers.
 [Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed:    0.0s
-[Parallel(n_jobs=-1)]: Done 144 tasks      | elapsed:    1.2s
+[Parallel(n_jobs=-1)]: Done 176 tasks      | elapsed:    0.7s
 </pre>
 </div>
 </div>
@@ -15672,7 +15678,7 @@ need to provide the necessary parameters as arguments to the corresponding funct
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>[Parallel(n_jobs=-1)]: Done 280 out of 280 | elapsed:    2.0s finished
+<pre>[Parallel(n_jobs=-1)]: Done 280 out of 280 | elapsed:    1.1s finished
 /opt/anaconda3/lib/python3.8/site-packages/sklearn/linear_model/_logistic.py:1315: UserWarning: l1_ratio parameter is only used when penalty is &#39;elasticnet&#39;. Got (penalty=l1)
   warnings.warn(&#34;l1_ratio parameter is only used when penalty is &#34;
 </pre>
@@ -15755,10 +15761,10 @@ need to provide the necessary parameters as arguments to the corresponding funct
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.008635</td>
-      <td>0.004445</td>
-      <td>0.002334</td>
-      <td>0.000397</td>
+      <td>0.007406</td>
+      <td>0.001091</td>
+      <td>0.002856</td>
+      <td>0.000776</td>
       <td>1e-05</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -15779,10 +15785,10 @@ need to provide the necessary parameters as arguments to the corresponding funct
     </tr>
     <tr>
       <th>1</th>
-      <td>0.027290</td>
-      <td>0.012218</td>
-      <td>0.005350</td>
-      <td>0.001616</td>
+      <td>0.008927</td>
+      <td>0.001539</td>
+      <td>0.003633</td>
+      <td>0.000662</td>
       <td>0.0001</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -15803,10 +15809,10 @@ need to provide the necessary parameters as arguments to the corresponding funct
     </tr>
     <tr>
       <th>2</th>
-      <td>0.036775</td>
-      <td>0.010660</td>
-      <td>0.004329</td>
-      <td>0.001691</td>
+      <td>0.007869</td>
+      <td>0.000994</td>
+      <td>0.002917</td>
+      <td>0.000598</td>
       <td>0.001</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -15827,10 +15833,10 @@ need to provide the necessary parameters as arguments to the corresponding funct
     </tr>
     <tr>
       <th>3</th>
-      <td>0.019415</td>
-      <td>0.014634</td>
-      <td>0.004523</td>
-      <td>0.001960</td>
+      <td>0.012361</td>
+      <td>0.003673</td>
+      <td>0.004860</td>
+      <td>0.001176</td>
       <td>0.01</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -15851,10 +15857,10 @@ need to provide the necessary parameters as arguments to the corresponding funct
     </tr>
     <tr>
       <th>4</th>
-      <td>0.034738</td>
-      <td>0.015506</td>
-      <td>0.005471</td>
-      <td>0.001963</td>
+      <td>0.013799</td>
+      <td>0.001454</td>
+      <td>0.005176</td>
+      <td>0.000889</td>
       <td>0.1</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -15875,10 +15881,10 @@ need to provide the necessary parameters as arguments to the corresponding funct
     </tr>
     <tr>
       <th>5</th>
-      <td>0.036921</td>
-      <td>0.011727</td>
-      <td>0.007270</td>
-      <td>0.002559</td>
+      <td>0.013333</td>
+      <td>0.001738</td>
+      <td>0.006132</td>
+      <td>0.002631</td>
       <td>0.1</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -15899,10 +15905,10 @@ need to provide the necessary parameters as arguments to the corresponding funct
     </tr>
     <tr>
       <th>6</th>
-      <td>0.040321</td>
-      <td>0.011924</td>
-      <td>0.007139</td>
-      <td>0.001638</td>
+      <td>0.015565</td>
+      <td>0.002753</td>
+      <td>0.007210</td>
+      <td>0.003709</td>
       <td>0.2</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -15923,10 +15929,10 @@ need to provide the necessary parameters as arguments to the corresponding funct
     </tr>
     <tr>
       <th>7</th>
-      <td>0.040756</td>
-      <td>0.010764</td>
-      <td>0.006731</td>
-      <td>0.001628</td>
+      <td>0.014498</td>
+      <td>0.003913</td>
+      <td>0.008080</td>
+      <td>0.005541</td>
       <td>0.3</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -15947,10 +15953,10 @@ need to provide the necessary parameters as arguments to the corresponding funct
     </tr>
     <tr>
       <th>8</th>
-      <td>0.042563</td>
-      <td>0.010821</td>
-      <td>0.006866</td>
-      <td>0.001594</td>
+      <td>0.018221</td>
+      <td>0.008117</td>
+      <td>0.004037</td>
+      <td>0.000609</td>
       <td>0.4</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -15971,10 +15977,10 @@ need to provide the necessary parameters as arguments to the corresponding funct
     </tr>
     <tr>
       <th>9</th>
-      <td>0.034809</td>
-      <td>0.015979</td>
-      <td>0.006118</td>
-      <td>0.001782</td>
+      <td>0.015601</td>
+      <td>0.005338</td>
+      <td>0.005400</td>
+      <td>0.002369</td>
       <td>0.5</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -15995,10 +16001,10 @@ need to provide the necessary parameters as arguments to the corresponding funct
     </tr>
     <tr>
       <th>10</th>
-      <td>0.040528</td>
-      <td>0.011897</td>
-      <td>0.006382</td>
-      <td>0.001872</td>
+      <td>0.017656</td>
+      <td>0.005285</td>
+      <td>0.005510</td>
+      <td>0.002318</td>
       <td>0.6</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -16019,10 +16025,10 @@ need to provide the necessary parameters as arguments to the corresponding funct
     </tr>
     <tr>
       <th>11</th>
-      <td>0.045243</td>
-      <td>0.007325</td>
-      <td>0.007038</td>
-      <td>0.000860</td>
+      <td>0.020987</td>
+      <td>0.006043</td>
+      <td>0.008260</td>
+      <td>0.004896</td>
       <td>0.7</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -16043,10 +16049,10 @@ need to provide the necessary parameters as arguments to the corresponding funct
     </tr>
     <tr>
       <th>12</th>
-      <td>0.036889</td>
-      <td>0.013172</td>
-      <td>0.005442</td>
-      <td>0.001830</td>
+      <td>0.020168</td>
+      <td>0.005677</td>
+      <td>0.007738</td>
+      <td>0.004050</td>
       <td>0.8</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -16067,10 +16073,10 @@ need to provide the necessary parameters as arguments to the corresponding funct
     </tr>
     <tr>
       <th>13</th>
-      <td>0.037845</td>
-      <td>0.012487</td>
-      <td>0.006388</td>
-      <td>0.001465</td>
+      <td>0.023964</td>
+      <td>0.006921</td>
+      <td>0.006844</td>
+      <td>0.003296</td>
       <td>0.9</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -16091,10 +16097,10 @@ need to provide the necessary parameters as arguments to the corresponding funct
     </tr>
     <tr>
       <th>14</th>
-      <td>0.040873</td>
-      <td>0.003438</td>
-      <td>0.006972</td>
-      <td>0.001426</td>
+      <td>0.021560</td>
+      <td>0.008622</td>
+      <td>0.007714</td>
+      <td>0.003593</td>
       <td>1</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -16115,10 +16121,10 @@ need to provide the necessary parameters as arguments to the corresponding funct
     </tr>
     <tr>
       <th>15</th>
-      <td>0.031250</td>
-      <td>0.011613</td>
-      <td>0.005725</td>
-      <td>0.001597</td>
+      <td>0.020722</td>
+      <td>0.007715</td>
+      <td>0.008294</td>
+      <td>0.004443</td>
       <td>2</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -16139,10 +16145,10 @@ need to provide the necessary parameters as arguments to the corresponding funct
     </tr>
     <tr>
       <th>16</th>
-      <td>0.035267</td>
-      <td>0.010549</td>
-      <td>0.007551</td>
-      <td>0.001556</td>
+      <td>0.020283</td>
+      <td>0.006677</td>
+      <td>0.012012</td>
+      <td>0.008671</td>
       <td>3</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -16163,10 +16169,10 @@ need to provide the necessary parameters as arguments to the corresponding funct
     </tr>
     <tr>
       <th>17</th>
-      <td>0.029783</td>
-      <td>0.014791</td>
-      <td>0.004512</td>
-      <td>0.001614</td>
+      <td>0.021711</td>
+      <td>0.005842</td>
+      <td>0.007007</td>
+      <td>0.002296</td>
       <td>4</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -16187,10 +16193,10 @@ need to provide the necessary parameters as arguments to the corresponding funct
     </tr>
     <tr>
       <th>18</th>
-      <td>0.042120</td>
-      <td>0.011986</td>
-      <td>0.006505</td>
-      <td>0.001763</td>
+      <td>0.025525</td>
+      <td>0.011889</td>
+      <td>0.008713</td>
+      <td>0.005400</td>
       <td>5</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -16211,10 +16217,10 @@ need to provide the necessary parameters as arguments to the corresponding funct
     </tr>
     <tr>
       <th>19</th>
-      <td>0.042978</td>
-      <td>0.018115</td>
-      <td>0.006437</td>
-      <td>0.001701</td>
+      <td>0.021469</td>
+      <td>0.011342</td>
+      <td>0.007291</td>
+      <td>0.005016</td>
       <td>6</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -16235,10 +16241,10 @@ need to provide the necessary parameters as arguments to the corresponding funct
     </tr>
     <tr>
       <th>20</th>
-      <td>0.030289</td>
-      <td>0.019230</td>
-      <td>0.004971</td>
-      <td>0.002258</td>
+      <td>0.023317</td>
+      <td>0.008876</td>
+      <td>0.008893</td>
+      <td>0.006221</td>
       <td>7</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -16259,10 +16265,10 @@ need to provide the necessary parameters as arguments to the corresponding funct
     </tr>
     <tr>
       <th>21</th>
-      <td>0.038378</td>
-      <td>0.008548</td>
-      <td>0.006772</td>
-      <td>0.001466</td>
+      <td>0.024574</td>
+      <td>0.013859</td>
+      <td>0.007590</td>
+      <td>0.004928</td>
       <td>8</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -16283,10 +16289,10 @@ need to provide the necessary parameters as arguments to the corresponding funct
     </tr>
     <tr>
       <th>22</th>
-      <td>0.040413</td>
-      <td>0.001520</td>
-      <td>0.007055</td>
-      <td>0.000994</td>
+      <td>0.020451</td>
+      <td>0.010316</td>
+      <td>0.007454</td>
+      <td>0.003586</td>
       <td>9</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -16307,10 +16313,10 @@ need to provide the necessary parameters as arguments to the corresponding funct
     </tr>
     <tr>
       <th>23</th>
-      <td>0.034883</td>
-      <td>0.010258</td>
-      <td>0.007554</td>
-      <td>0.002336</td>
+      <td>0.022259</td>
+      <td>0.008812</td>
+      <td>0.008478</td>
+      <td>0.004276</td>
       <td>10</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -16331,10 +16337,10 @@ need to provide the necessary parameters as arguments to the corresponding funct
     </tr>
     <tr>
       <th>24</th>
-      <td>0.041003</td>
-      <td>0.003366</td>
-      <td>0.007611</td>
-      <td>0.000850</td>
+      <td>0.017569</td>
+      <td>0.007035</td>
+      <td>0.006832</td>
+      <td>0.005242</td>
       <td>100</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -16355,10 +16361,10 @@ need to provide the necessary parameters as arguments to the corresponding funct
     </tr>
     <tr>
       <th>25</th>
-      <td>0.033883</td>
-      <td>0.010550</td>
-      <td>0.006370</td>
-      <td>0.001169</td>
+      <td>0.018687</td>
+      <td>0.006046</td>
+      <td>0.005997</td>
+      <td>0.001909</td>
       <td>1000</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -16379,10 +16385,10 @@ need to provide the necessary parameters as arguments to the corresponding funct
     </tr>
     <tr>
       <th>26</th>
-      <td>0.034488</td>
-      <td>0.012043</td>
-      <td>0.006707</td>
-      <td>0.002115</td>
+      <td>0.015583</td>
+      <td>0.002860</td>
+      <td>0.006037</td>
+      <td>0.002974</td>
       <td>10000</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -16403,10 +16409,10 @@ need to provide the necessary parameters as arguments to the corresponding funct
     </tr>
     <tr>
       <th>27</th>
-      <td>0.030828</td>
-      <td>0.012680</td>
-      <td>0.005531</td>
-      <td>0.001836</td>
+      <td>0.013090</td>
+      <td>0.002534</td>
+      <td>0.003983</td>
+      <td>0.000531</td>
       <td>100000</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -16467,8 +16473,8 @@ need to provide the necessary parameters as arguments to the corresponding funct
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>CPU times: user 9.93 ms, sys: 1.49 ms, total: 11.4 ms
-Wall time: 10.3 ms
+<pre>CPU times: user 11.1 ms, sys: 1.49 ms, total: 12.6 ms
+Wall time: 11.8 ms
 </pre>
 </div>
 </div>
@@ -16570,26 +16576,26 @@ Wall time: 10.3 ms
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>array([[-0.14788805,  0.        ,  0.        ,  0.        ,  0.        ,
-        -0.81611462,  0.        ,  0.        ,  0.        ,  0.        ,
-         0.        ,  0.81049879,  0.31988995,  0.        ,  0.        ,
+<pre>array([[-0.14842388,  0.        ,  0.        ,  0.        ,  0.        ,
+        -0.81583577,  0.        ,  0.        ,  0.        ,  0.        ,
+         0.        ,  0.80965923,  0.32036945,  0.        ,  0.        ,
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-         0.        ,  0.        ,  0.        ,  0.        , -0.76845136,
+         0.        ,  0.        ,  0.        ,  0.        , -0.76819565,
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-         0.        ,  0.        ,  0.        ,  0.        ,  0.69081689,
-         0.        , -0.30530531,  0.        ,  0.        ,  0.        ,
+         0.        ,  0.        ,  0.        ,  0.        ,  0.69067856,
+         0.        , -0.30467113,  0.        ,  0.        ,  0.        ,
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-         0.0986468 ,  0.        ,  0.        ,  0.02237786,  0.61521533,
-         0.09807364,  0.14275807,  0.        ,  0.        ,  0.        ,
-        -1.10373835,  0.        ,  0.        ,  0.        ,  0.        ,
-         0.34641537,  0.        , -0.54729255,  0.        ,  0.        ,
-         0.        ,  0.        ,  0.21329053,  0.        , -0.40744841,
-        -0.93499464]])</pre>
+         0.09707064,  0.        ,  0.        ,  0.02541195,  0.61111048,
+         0.10176328,  0.14153346,  0.        ,  0.        ,  0.        ,
+        -1.10414302,  0.        ,  0.        ,  0.        ,  0.        ,
+         0.3458632 ,  0.        , -0.5468324 ,  0.        ,  0.        ,
+         0.        ,  0.        ,  0.21320203,  0.        , -0.40668928,
+        -0.93560215]])</pre>
 </div>
 
 </div>
@@ -16610,6 +16616,7 @@ Wall time: 10.3 ms
 <p>The results of cross validation is certainly interesting. All the parameters I have tried seems to give the same exact score, which is 0.83. Accuracy score of 0.82 on the test set tells me that there is not much overfitting.</p>
 <p>Most coefficients are 0, which is really weird since each observation is a time series. I believe this indicates that this time series can be mostly explained by the values at the moments that have a coefficient.</p>
 <p>It also means that the model does not use any information from most of our features, which means the model can be changed to fit the data better.</p>
+<p>The underlying data seems to be non-stationary.</p>
 
 </div>
 </div>
@@ -16746,7 +16753,7 @@ part (a) for this newly created dataset and compare the results.</p>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
 <pre>[Parallel(n_jobs=-1)]: Using backend LokyBackend with 8 concurrent workers.
 [Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed:    0.1s
-[Parallel(n_jobs=-1)]: Done 144 tasks      | elapsed:    1.1s
+[Parallel(n_jobs=-1)]: Done 176 tasks      | elapsed:    0.7s
 </pre>
 </div>
 </div>
@@ -16770,8 +16777,7 @@ part (a) for this newly created dataset and compare the results.</p>
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>[Parallel(n_jobs=-1)]: Done 265 out of 280 | elapsed:    1.9s remaining:    0.1s
-[Parallel(n_jobs=-1)]: Done 280 out of 280 | elapsed:    2.0s finished
+<pre>[Parallel(n_jobs=-1)]: Done 280 out of 280 | elapsed:    1.0s finished
 /opt/anaconda3/lib/python3.8/site-packages/sklearn/linear_model/_logistic.py:1315: UserWarning: l1_ratio parameter is only used when penalty is &#39;elasticnet&#39;. Got (penalty=l1)
   warnings.warn(&#34;l1_ratio parameter is only used when penalty is &#34;
 </pre>
@@ -16854,10 +16860,10 @@ part (a) for this newly created dataset and compare the results.</p>
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.015410</td>
-      <td>0.011785</td>
-      <td>0.003600</td>
-      <td>0.001836</td>
+      <td>0.012315</td>
+      <td>0.002664</td>
+      <td>0.004063</td>
+      <td>0.000775</td>
       <td>1e-05</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -16878,10 +16884,10 @@ part (a) for this newly created dataset and compare the results.</p>
     </tr>
     <tr>
       <th>1</th>
-      <td>0.043503</td>
-      <td>0.009783</td>
-      <td>0.006814</td>
-      <td>0.002420</td>
+      <td>0.013293</td>
+      <td>0.004561</td>
+      <td>0.004867</td>
+      <td>0.001531</td>
       <td>0.0001</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -16902,10 +16908,10 @@ part (a) for this newly created dataset and compare the results.</p>
     </tr>
     <tr>
       <th>2</th>
-      <td>0.027416</td>
-      <td>0.015328</td>
-      <td>0.004371</td>
-      <td>0.001582</td>
+      <td>0.017809</td>
+      <td>0.009170</td>
+      <td>0.007108</td>
+      <td>0.003311</td>
       <td>0.001</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -16926,10 +16932,10 @@ part (a) for this newly created dataset and compare the results.</p>
     </tr>
     <tr>
       <th>3</th>
-      <td>0.033319</td>
-      <td>0.017491</td>
-      <td>0.006416</td>
-      <td>0.001901</td>
+      <td>0.018942</td>
+      <td>0.006953</td>
+      <td>0.005865</td>
+      <td>0.002591</td>
       <td>0.01</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -16950,10 +16956,10 @@ part (a) for this newly created dataset and compare the results.</p>
     </tr>
     <tr>
       <th>4</th>
-      <td>0.035940</td>
-      <td>0.009989</td>
-      <td>0.007104</td>
-      <td>0.001363</td>
+      <td>0.015816</td>
+      <td>0.003842</td>
+      <td>0.008295</td>
+      <td>0.004510</td>
       <td>0.1</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -16974,10 +16980,10 @@ part (a) for this newly created dataset and compare the results.</p>
     </tr>
     <tr>
       <th>5</th>
-      <td>0.044747</td>
-      <td>0.006051</td>
-      <td>0.006551</td>
-      <td>0.000910</td>
+      <td>0.017792</td>
+      <td>0.002794</td>
+      <td>0.006238</td>
+      <td>0.003907</td>
       <td>0.1</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -16998,10 +17004,10 @@ part (a) for this newly created dataset and compare the results.</p>
     </tr>
     <tr>
       <th>6</th>
-      <td>0.040022</td>
-      <td>0.008550</td>
-      <td>0.006619</td>
-      <td>0.000986</td>
+      <td>0.015768</td>
+      <td>0.003725</td>
+      <td>0.006208</td>
+      <td>0.003380</td>
       <td>0.2</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -17022,10 +17028,10 @@ part (a) for this newly created dataset and compare the results.</p>
     </tr>
     <tr>
       <th>7</th>
-      <td>0.026166</td>
-      <td>0.013953</td>
-      <td>0.005520</td>
-      <td>0.001314</td>
+      <td>0.018382</td>
+      <td>0.008809</td>
+      <td>0.007462</td>
+      <td>0.004375</td>
       <td>0.3</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -17046,10 +17052,10 @@ part (a) for this newly created dataset and compare the results.</p>
     </tr>
     <tr>
       <th>8</th>
-      <td>0.035621</td>
-      <td>0.010182</td>
-      <td>0.006690</td>
-      <td>0.001843</td>
+      <td>0.020797</td>
+      <td>0.003337</td>
+      <td>0.009079</td>
+      <td>0.005668</td>
       <td>0.4</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -17070,10 +17076,10 @@ part (a) for this newly created dataset and compare the results.</p>
     </tr>
     <tr>
       <th>9</th>
-      <td>0.034667</td>
-      <td>0.014248</td>
-      <td>0.006381</td>
-      <td>0.001801</td>
+      <td>0.022807</td>
+      <td>0.010345</td>
+      <td>0.005996</td>
+      <td>0.002786</td>
       <td>0.5</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -17094,10 +17100,10 @@ part (a) for this newly created dataset and compare the results.</p>
     </tr>
     <tr>
       <th>10</th>
-      <td>0.038632</td>
-      <td>0.007270</td>
-      <td>0.007211</td>
-      <td>0.001366</td>
+      <td>0.020298</td>
+      <td>0.005419</td>
+      <td>0.009906</td>
+      <td>0.007204</td>
       <td>0.6</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -17118,10 +17124,10 @@ part (a) for this newly created dataset and compare the results.</p>
     </tr>
     <tr>
       <th>11</th>
-      <td>0.040517</td>
-      <td>0.002127</td>
-      <td>0.008057</td>
-      <td>0.001079</td>
+      <td>0.017838</td>
+      <td>0.004620</td>
+      <td>0.006889</td>
+      <td>0.004043</td>
       <td>0.7</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -17142,10 +17148,10 @@ part (a) for this newly created dataset and compare the results.</p>
     </tr>
     <tr>
       <th>12</th>
-      <td>0.037551</td>
-      <td>0.007884</td>
-      <td>0.007083</td>
-      <td>0.000542</td>
+      <td>0.018193</td>
+      <td>0.005566</td>
+      <td>0.006118</td>
+      <td>0.002789</td>
       <td>0.8</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -17166,10 +17172,10 @@ part (a) for this newly created dataset and compare the results.</p>
     </tr>
     <tr>
       <th>13</th>
-      <td>0.040265</td>
-      <td>0.008486</td>
-      <td>0.006854</td>
-      <td>0.001052</td>
+      <td>0.014696</td>
+      <td>0.004096</td>
+      <td>0.005718</td>
+      <td>0.002890</td>
       <td>0.9</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -17190,10 +17196,10 @@ part (a) for this newly created dataset and compare the results.</p>
     </tr>
     <tr>
       <th>14</th>
-      <td>0.040162</td>
-      <td>0.008958</td>
-      <td>0.006197</td>
-      <td>0.001503</td>
+      <td>0.014128</td>
+      <td>0.002192</td>
+      <td>0.004080</td>
+      <td>0.001138</td>
       <td>1</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -17214,10 +17220,10 @@ part (a) for this newly created dataset and compare the results.</p>
     </tr>
     <tr>
       <th>15</th>
-      <td>0.040364</td>
-      <td>0.009263</td>
-      <td>0.007273</td>
-      <td>0.001907</td>
+      <td>0.014025</td>
+      <td>0.003574</td>
+      <td>0.006648</td>
+      <td>0.004021</td>
       <td>2</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -17238,10 +17244,10 @@ part (a) for this newly created dataset and compare the results.</p>
     </tr>
     <tr>
       <th>16</th>
-      <td>0.039723</td>
-      <td>0.012282</td>
-      <td>0.007131</td>
-      <td>0.002032</td>
+      <td>0.015329</td>
+      <td>0.004573</td>
+      <td>0.004042</td>
+      <td>0.001025</td>
       <td>3</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -17262,10 +17268,10 @@ part (a) for this newly created dataset and compare the results.</p>
     </tr>
     <tr>
       <th>17</th>
-      <td>0.036177</td>
-      <td>0.014018</td>
-      <td>0.005050</td>
-      <td>0.001774</td>
+      <td>0.013797</td>
+      <td>0.003724</td>
+      <td>0.004808</td>
+      <td>0.002068</td>
       <td>4</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -17286,10 +17292,10 @@ part (a) for this newly created dataset and compare the results.</p>
     </tr>
     <tr>
       <th>18</th>
-      <td>0.032876</td>
-      <td>0.018124</td>
-      <td>0.005307</td>
-      <td>0.002047</td>
+      <td>0.013232</td>
+      <td>0.002382</td>
+      <td>0.007978</td>
+      <td>0.004871</td>
       <td>5</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -17310,10 +17316,10 @@ part (a) for this newly created dataset and compare the results.</p>
     </tr>
     <tr>
       <th>19</th>
-      <td>0.031845</td>
-      <td>0.012632</td>
-      <td>0.005782</td>
-      <td>0.001938</td>
+      <td>0.016123</td>
+      <td>0.005638</td>
+      <td>0.006774</td>
+      <td>0.004905</td>
       <td>6</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -17334,10 +17340,10 @@ part (a) for this newly created dataset and compare the results.</p>
     </tr>
     <tr>
       <th>20</th>
-      <td>0.031121</td>
-      <td>0.016716</td>
-      <td>0.005334</td>
-      <td>0.001845</td>
+      <td>0.013565</td>
+      <td>0.003124</td>
+      <td>0.005099</td>
+      <td>0.003280</td>
       <td>7</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -17358,10 +17364,10 @@ part (a) for this newly created dataset and compare the results.</p>
     </tr>
     <tr>
       <th>21</th>
-      <td>0.037788</td>
-      <td>0.011000</td>
-      <td>0.006216</td>
-      <td>0.001632</td>
+      <td>0.016290</td>
+      <td>0.007351</td>
+      <td>0.005035</td>
+      <td>0.002947</td>
       <td>8</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -17382,10 +17388,10 @@ part (a) for this newly created dataset and compare the results.</p>
     </tr>
     <tr>
       <th>22</th>
-      <td>0.036919</td>
-      <td>0.013388</td>
-      <td>0.005915</td>
-      <td>0.001792</td>
+      <td>0.017915</td>
+      <td>0.005332</td>
+      <td>0.007520</td>
+      <td>0.004513</td>
       <td>9</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -17406,10 +17412,10 @@ part (a) for this newly created dataset and compare the results.</p>
     </tr>
     <tr>
       <th>23</th>
-      <td>0.040353</td>
-      <td>0.012447</td>
-      <td>0.006534</td>
-      <td>0.001087</td>
+      <td>0.019403</td>
+      <td>0.006826</td>
+      <td>0.007716</td>
+      <td>0.003760</td>
       <td>10</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -17430,10 +17436,10 @@ part (a) for this newly created dataset and compare the results.</p>
     </tr>
     <tr>
       <th>24</th>
-      <td>0.041395</td>
-      <td>0.009127</td>
-      <td>0.007200</td>
-      <td>0.001344</td>
+      <td>0.022696</td>
+      <td>0.005911</td>
+      <td>0.006846</td>
+      <td>0.004925</td>
       <td>100</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -17454,10 +17460,10 @@ part (a) for this newly created dataset and compare the results.</p>
     </tr>
     <tr>
       <th>25</th>
-      <td>0.041306</td>
-      <td>0.001903</td>
-      <td>0.007156</td>
-      <td>0.000633</td>
+      <td>0.024871</td>
+      <td>0.007730</td>
+      <td>0.006599</td>
+      <td>0.002244</td>
       <td>1000</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -17478,10 +17484,10 @@ part (a) for this newly created dataset and compare the results.</p>
     </tr>
     <tr>
       <th>26</th>
-      <td>0.033174</td>
-      <td>0.010755</td>
-      <td>0.006678</td>
-      <td>0.001089</td>
+      <td>0.018911</td>
+      <td>0.007669</td>
+      <td>0.005188</td>
+      <td>0.001221</td>
       <td>10000</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -17502,10 +17508,10 @@ part (a) for this newly created dataset and compare the results.</p>
     </tr>
     <tr>
       <th>27</th>
-      <td>0.031855</td>
-      <td>0.011222</td>
-      <td>0.006321</td>
-      <td>0.001903</td>
+      <td>0.014779</td>
+      <td>0.002857</td>
+      <td>0.004556</td>
+      <td>0.001714</td>
       <td>100000</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -17566,8 +17572,8 @@ part (a) for this newly created dataset and compare the results.</p>
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>CPU times: user 9.27 ms, sys: 1.16 ms, total: 10.4 ms
-Wall time: 9.62 ms
+<pre>CPU times: user 11.4 ms, sys: 1.64 ms, total: 13.1 ms
+Wall time: 11.7 ms
 </pre>
 </div>
 </div>
@@ -17669,25 +17675,25 @@ Wall time: 9.62 ms
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>array([[ 0.01128861,  0.44327704,  0.        , -0.54584239,  0.        ,
-         0.        ,  0.48166619,  0.        ,  0.43961956,  0.        ,
-         0.40032595, -0.03123073, -0.17420868,  0.        ,  0.        ,
-         0.        ,  0.        , -0.24760742,  0.        , -0.20277069,
-         0.        ,  0.        , -0.15762506, -0.07683396,  0.        ,
-        -0.51693256,  0.        , -0.62963072, -0.21858233,  0.        ,
-         0.24913882,  0.        ,  0.        ,  0.        ,  0.30154525,
-         0.14910494,  0.        ,  0.        ,  0.35331869,  0.        ,
-         0.        ,  0.        ,  0.24603481,  0.        ,  0.        ,
-        -0.55581742,  0.        , -0.10744602,  0.        ,  0.59468043,
-         0.        ,  0.        ,  0.        ,  0.        , -0.47951281,
-         0.        ,  0.        ,  0.17125947,  0.        ,  0.        ,
-         0.        ,  0.        ,  0.02931092,  0.        ,  0.        ,
-         0.        ,  0.        , -0.1206751 ,  0.01736258,  0.        ,
-        -0.31555735,  0.        ,  0.57876314,  0.        ,  0.        ,
-         0.        , -0.438281  ,  0.        , -0.35887734, -0.39178835,
+<pre>array([[ 0.01085228,  0.44313219,  0.        , -0.54565112,  0.        ,
+         0.        ,  0.48198198,  0.        ,  0.44047408,  0.        ,
+         0.40035774, -0.03149683, -0.17303017,  0.        ,  0.        ,
+         0.        ,  0.        , -0.24658655,  0.        , -0.20227572,
+         0.        ,  0.        , -0.15785919, -0.07761971,  0.        ,
+        -0.51847254,  0.        , -0.6317012 , -0.21824464,  0.        ,
+         0.24979706,  0.        ,  0.        ,  0.        ,  0.2992666 ,
+         0.14869635,  0.        ,  0.        ,  0.35042338,  0.        ,
+         0.        ,  0.        ,  0.24632904,  0.        ,  0.        ,
+        -0.55787728,  0.        , -0.10924359,  0.        ,  0.59501901,
+         0.        ,  0.        ,  0.        ,  0.        , -0.47909741,
+         0.        ,  0.        ,  0.17107273,  0.        ,  0.        ,
+         0.        ,  0.        ,  0.02914495,  0.        ,  0.        ,
+         0.        ,  0.        , -0.11890608,  0.01827408,  0.        ,
+        -0.31618624,  0.        ,  0.57849004,  0.        ,  0.        ,
+         0.        , -0.43901386,  0.        , -0.35860562, -0.39160653,
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        -0.38194513, -0.33695388,  0.        , -0.1305552 , -0.13016359,
-         0.        ,  0.        ,  0.        , -1.10404127,  0.22347541]])</pre>
+        -0.38209754, -0.33771907,  0.        , -0.13014863, -0.12903384,
+         0.        ,  0.        ,  0.        , -1.10327276,  0.22572319]])</pre>
 </div>
 
 </div>
@@ -17708,6 +17714,7 @@ information? Try to interpret the model.</p>
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>These results are really getting weird. The cross-validation mean test score is still same for all the model parameters I have tried, and the results are worse than the previous model. However, the test prediction is slightly better with 0.84. That's 2% percent improvement.</p>
 <p>There are a lot more features with coefficients in this case, which makes sense since each feature now contains information about two features from the previous model.</p>
+<p>Misclassification errors are same for both predictions, however they favor different classes.</p>
 
 </div>
 </div>
@@ -17782,7 +17789,7 @@ Present your results in a (2-by-2) confusion matrix.</p>
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
 <pre>[Parallel(n_jobs=-1)]: Using backend LokyBackend with 8 concurrent workers.
-[Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed:    0.0s
+[Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed:    0.1s
 </pre>
 </div>
 </div>
@@ -17806,7 +17813,7 @@ Present your results in a (2-by-2) confusion matrix.</p>
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>[Parallel(n_jobs=-1)]: Done 144 tasks      | elapsed:    1.1s
+<pre>[Parallel(n_jobs=-1)]: Done 144 tasks      | elapsed:    0.8s
 </pre>
 </div>
 </div>
@@ -17818,7 +17825,7 @@ Present your results in a (2-by-2) confusion matrix.</p>
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>pipe best parameters:  {&#39;model__l1_ratio&#39;: 1e-05, &#39;model__penalty&#39;: &#39;l1&#39;, &#39;model__solver&#39;: &#39;liblinear&#39;}
+<pre>pipe best parameters:  {&#39;model__l1_ratio&#39;: 0.01, &#39;model__penalty&#39;: &#39;l1&#39;, &#39;model__solver&#39;: &#39;liblinear&#39;}
 </pre>
 </div>
 </div>
@@ -17830,8 +17837,8 @@ Present your results in a (2-by-2) confusion matrix.</p>
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>[Parallel(n_jobs=-1)]: Done 265 out of 280 | elapsed:    2.2s remaining:    0.1s
-[Parallel(n_jobs=-1)]: Done 280 out of 280 | elapsed:    2.2s finished
+<pre>[Parallel(n_jobs=-1)]: Done 265 out of 280 | elapsed:    1.3s remaining:    0.1s
+[Parallel(n_jobs=-1)]: Done 280 out of 280 | elapsed:    1.4s finished
 /opt/anaconda3/lib/python3.8/site-packages/sklearn/linear_model/_logistic.py:1315: UserWarning: l1_ratio parameter is only used when penalty is &#39;elasticnet&#39;. Got (penalty=l1)
   warnings.warn(&#34;l1_ratio parameter is only used when penalty is &#34;
 </pre>
@@ -17914,10 +17921,10 @@ Present your results in a (2-by-2) confusion matrix.</p>
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.021853</td>
-      <td>0.010566</td>
-      <td>0.004384</td>
-      <td>0.000696</td>
+      <td>0.022272</td>
+      <td>0.007211</td>
+      <td>0.008880</td>
+      <td>0.004949</td>
       <td>1e-05</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -17925,23 +17932,23 @@ Present your results in a (2-by-2) confusion matrix.</p>
       <td>0.9</td>
       <td>0.6</td>
       <td>...</td>
-      <td>1.0</td>
+      <td>0.9</td>
       <td>0.6</td>
       <td>1.0</td>
       <td>0.7</td>
       <td>0.9</td>
       <td>0.8</td>
       <td>0.7</td>
-      <td>0.80</td>
-      <td>0.141421</td>
-      <td>1</td>
+      <td>0.79</td>
+      <td>0.130000</td>
+      <td>14</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>0.021315</td>
-      <td>0.011413</td>
-      <td>0.004955</td>
-      <td>0.001177</td>
+      <td>0.031274</td>
+      <td>0.009620</td>
+      <td>0.012367</td>
+      <td>0.007850</td>
       <td>0.0001</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -17958,18 +17965,42 @@ Present your results in a (2-by-2) confusion matrix.</p>
       <td>0.7</td>
       <td>0.79</td>
       <td>0.130000</td>
-      <td>13</td>
+      <td>14</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>0.018712</td>
-      <td>0.010031</td>
-      <td>0.004731</td>
-      <td>0.000669</td>
+      <td>0.025490</td>
+      <td>0.007583</td>
+      <td>0.010051</td>
+      <td>0.004015</td>
       <td>0.001</td>
       <td>l1</td>
       <td>liblinear</td>
       <td>{'model__l1_ratio': 0.001, 'model__penalty': '...</td>
+      <td>0.9</td>
+      <td>0.6</td>
+      <td>...</td>
+      <td>0.9</td>
+      <td>0.6</td>
+      <td>1.0</td>
+      <td>0.7</td>
+      <td>0.9</td>
+      <td>0.8</td>
+      <td>0.7</td>
+      <td>0.79</td>
+      <td>0.130000</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.021590</td>
+      <td>0.004566</td>
+      <td>0.011288</td>
+      <td>0.004664</td>
+      <td>0.01</td>
+      <td>l1</td>
+      <td>liblinear</td>
+      <td>{'model__l1_ratio': 0.01, 'model__penalty': 'l...</td>
       <td>0.9</td>
       <td>0.6</td>
       <td>...</td>
@@ -17985,35 +18016,11 @@ Present your results in a (2-by-2) confusion matrix.</p>
       <td>1</td>
     </tr>
     <tr>
-      <th>3</th>
-      <td>0.030474</td>
-      <td>0.013731</td>
-      <td>0.005210</td>
-      <td>0.001842</td>
-      <td>0.01</td>
-      <td>l1</td>
-      <td>liblinear</td>
-      <td>{'model__l1_ratio': 0.01, 'model__penalty': 'l...</td>
-      <td>0.9</td>
-      <td>0.6</td>
-      <td>...</td>
-      <td>0.9</td>
-      <td>0.6</td>
-      <td>1.0</td>
-      <td>0.7</td>
-      <td>0.9</td>
-      <td>0.8</td>
-      <td>0.7</td>
-      <td>0.79</td>
-      <td>0.130000</td>
-      <td>13</td>
-    </tr>
-    <tr>
       <th>4</th>
-      <td>0.032069</td>
-      <td>0.013250</td>
-      <td>0.005536</td>
-      <td>0.002109</td>
+      <td>0.023132</td>
+      <td>0.009146</td>
+      <td>0.011873</td>
+      <td>0.004701</td>
       <td>0.1</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -18030,14 +18037,14 @@ Present your results in a (2-by-2) confusion matrix.</p>
       <td>0.7</td>
       <td>0.79</td>
       <td>0.130000</td>
-      <td>13</td>
+      <td>14</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>0.034441</td>
-      <td>0.017812</td>
-      <td>0.005965</td>
-      <td>0.001656</td>
+      <td>0.025852</td>
+      <td>0.006825</td>
+      <td>0.008569</td>
+      <td>0.006087</td>
       <td>0.1</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -18058,10 +18065,10 @@ Present your results in a (2-by-2) confusion matrix.</p>
     </tr>
     <tr>
       <th>6</th>
-      <td>0.038802</td>
-      <td>0.013884</td>
-      <td>0.006320</td>
-      <td>0.002845</td>
+      <td>0.024044</td>
+      <td>0.005423</td>
+      <td>0.007232</td>
+      <td>0.002664</td>
       <td>0.2</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -18069,23 +18076,23 @@ Present your results in a (2-by-2) confusion matrix.</p>
       <td>0.9</td>
       <td>0.6</td>
       <td>...</td>
-      <td>0.9</td>
+      <td>1.0</td>
       <td>0.6</td>
       <td>1.0</td>
       <td>0.7</td>
       <td>0.9</td>
       <td>0.8</td>
       <td>0.7</td>
-      <td>0.79</td>
-      <td>0.130000</td>
-      <td>13</td>
+      <td>0.80</td>
+      <td>0.141421</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>0.029781</td>
-      <td>0.015396</td>
-      <td>0.005371</td>
-      <td>0.001611</td>
+      <td>0.026491</td>
+      <td>0.005721</td>
+      <td>0.008495</td>
+      <td>0.002861</td>
       <td>0.3</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -18093,23 +18100,23 @@ Present your results in a (2-by-2) confusion matrix.</p>
       <td>0.9</td>
       <td>0.6</td>
       <td>...</td>
-      <td>0.9</td>
+      <td>1.0</td>
       <td>0.6</td>
       <td>1.0</td>
       <td>0.7</td>
       <td>0.9</td>
       <td>0.8</td>
       <td>0.7</td>
-      <td>0.79</td>
-      <td>0.130000</td>
-      <td>13</td>
+      <td>0.80</td>
+      <td>0.141421</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>0.025211</td>
-      <td>0.013773</td>
-      <td>0.004313</td>
-      <td>0.000512</td>
+      <td>0.019324</td>
+      <td>0.003581</td>
+      <td>0.005595</td>
+      <td>0.002392</td>
       <td>0.4</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -18117,23 +18124,23 @@ Present your results in a (2-by-2) confusion matrix.</p>
       <td>0.9</td>
       <td>0.6</td>
       <td>...</td>
-      <td>1.0</td>
+      <td>0.9</td>
       <td>0.6</td>
       <td>1.0</td>
       <td>0.7</td>
       <td>0.9</td>
       <td>0.8</td>
       <td>0.7</td>
-      <td>0.80</td>
-      <td>0.141421</td>
-      <td>1</td>
+      <td>0.79</td>
+      <td>0.130000</td>
+      <td>14</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>0.037244</td>
-      <td>0.010958</td>
-      <td>0.005529</td>
-      <td>0.001555</td>
+      <td>0.020361</td>
+      <td>0.004484</td>
+      <td>0.007446</td>
+      <td>0.005303</td>
       <td>0.5</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -18141,23 +18148,23 @@ Present your results in a (2-by-2) confusion matrix.</p>
       <td>0.9</td>
       <td>0.6</td>
       <td>...</td>
-      <td>0.9</td>
+      <td>1.0</td>
       <td>0.6</td>
       <td>1.0</td>
       <td>0.7</td>
       <td>0.9</td>
       <td>0.8</td>
       <td>0.7</td>
-      <td>0.79</td>
-      <td>0.130000</td>
-      <td>13</td>
+      <td>0.80</td>
+      <td>0.141421</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>10</th>
-      <td>0.020775</td>
-      <td>0.013047</td>
-      <td>0.004602</td>
-      <td>0.001148</td>
+      <td>0.017550</td>
+      <td>0.004104</td>
+      <td>0.007168</td>
+      <td>0.004201</td>
       <td>0.6</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -18165,75 +18172,27 @@ Present your results in a (2-by-2) confusion matrix.</p>
       <td>0.9</td>
       <td>0.6</td>
       <td>...</td>
-      <td>1.0</td>
+      <td>0.9</td>
       <td>0.6</td>
       <td>1.0</td>
       <td>0.7</td>
       <td>0.9</td>
       <td>0.8</td>
       <td>0.7</td>
-      <td>0.80</td>
-      <td>0.141421</td>
-      <td>1</td>
+      <td>0.79</td>
+      <td>0.130000</td>
+      <td>14</td>
     </tr>
     <tr>
       <th>11</th>
-      <td>0.032125</td>
-      <td>0.014047</td>
-      <td>0.004944</td>
-      <td>0.001807</td>
+      <td>0.024260</td>
+      <td>0.005798</td>
+      <td>0.009102</td>
+      <td>0.004725</td>
       <td>0.7</td>
       <td>l1</td>
       <td>liblinear</td>
       <td>{'model__l1_ratio': 0.7000000000000001, 'model...</td>
-      <td>0.9</td>
-      <td>0.6</td>
-      <td>...</td>
-      <td>1.0</td>
-      <td>0.6</td>
-      <td>1.0</td>
-      <td>0.7</td>
-      <td>0.9</td>
-      <td>0.8</td>
-      <td>0.7</td>
-      <td>0.80</td>
-      <td>0.141421</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>0.040475</td>
-      <td>0.013968</td>
-      <td>0.007383</td>
-      <td>0.002221</td>
-      <td>0.8</td>
-      <td>l1</td>
-      <td>liblinear</td>
-      <td>{'model__l1_ratio': 0.8, 'model__penalty': 'l1...</td>
-      <td>0.9</td>
-      <td>0.6</td>
-      <td>...</td>
-      <td>1.0</td>
-      <td>0.6</td>
-      <td>1.0</td>
-      <td>0.7</td>
-      <td>0.9</td>
-      <td>0.8</td>
-      <td>0.7</td>
-      <td>0.80</td>
-      <td>0.141421</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>0.045484</td>
-      <td>0.011621</td>
-      <td>0.006919</td>
-      <td>0.002127</td>
-      <td>0.9</td>
-      <td>l1</td>
-      <td>liblinear</td>
-      <td>{'model__l1_ratio': 0.9, 'model__penalty': 'l1...</td>
       <td>0.9</td>
       <td>0.6</td>
       <td>...</td>
@@ -18246,14 +18205,62 @@ Present your results in a (2-by-2) confusion matrix.</p>
       <td>0.7</td>
       <td>0.79</td>
       <td>0.130000</td>
-      <td>13</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>0.024615</td>
+      <td>0.008353</td>
+      <td>0.006859</td>
+      <td>0.002244</td>
+      <td>0.8</td>
+      <td>l1</td>
+      <td>liblinear</td>
+      <td>{'model__l1_ratio': 0.8, 'model__penalty': 'l1...</td>
+      <td>0.9</td>
+      <td>0.6</td>
+      <td>...</td>
+      <td>0.9</td>
+      <td>0.6</td>
+      <td>1.0</td>
+      <td>0.7</td>
+      <td>0.9</td>
+      <td>0.8</td>
+      <td>0.7</td>
+      <td>0.79</td>
+      <td>0.130000</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>0.022745</td>
+      <td>0.007594</td>
+      <td>0.011172</td>
+      <td>0.007356</td>
+      <td>0.9</td>
+      <td>l1</td>
+      <td>liblinear</td>
+      <td>{'model__l1_ratio': 0.9, 'model__penalty': 'l1...</td>
+      <td>0.9</td>
+      <td>0.6</td>
+      <td>...</td>
+      <td>1.0</td>
+      <td>0.6</td>
+      <td>1.0</td>
+      <td>0.7</td>
+      <td>0.9</td>
+      <td>0.8</td>
+      <td>0.7</td>
+      <td>0.80</td>
+      <td>0.141421</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>14</th>
-      <td>0.047347</td>
-      <td>0.012393</td>
-      <td>0.007954</td>
-      <td>0.001941</td>
+      <td>0.023835</td>
+      <td>0.006313</td>
+      <td>0.008530</td>
+      <td>0.003735</td>
       <td>1</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -18274,10 +18281,10 @@ Present your results in a (2-by-2) confusion matrix.</p>
     </tr>
     <tr>
       <th>15</th>
-      <td>0.041585</td>
-      <td>0.014128</td>
-      <td>0.006547</td>
-      <td>0.002428</td>
+      <td>0.026947</td>
+      <td>0.005797</td>
+      <td>0.009419</td>
+      <td>0.006937</td>
       <td>2</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -18285,23 +18292,23 @@ Present your results in a (2-by-2) confusion matrix.</p>
       <td>0.9</td>
       <td>0.6</td>
       <td>...</td>
-      <td>1.0</td>
+      <td>0.9</td>
       <td>0.6</td>
       <td>1.0</td>
       <td>0.7</td>
       <td>0.9</td>
       <td>0.8</td>
       <td>0.7</td>
-      <td>0.80</td>
-      <td>0.141421</td>
-      <td>1</td>
+      <td>0.79</td>
+      <td>0.130000</td>
+      <td>14</td>
     </tr>
     <tr>
       <th>16</th>
-      <td>0.042836</td>
-      <td>0.012757</td>
-      <td>0.007573</td>
-      <td>0.002850</td>
+      <td>0.026627</td>
+      <td>0.010305</td>
+      <td>0.007091</td>
+      <td>0.003199</td>
       <td>3</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -18318,14 +18325,14 @@ Present your results in a (2-by-2) confusion matrix.</p>
       <td>0.7</td>
       <td>0.79</td>
       <td>0.130000</td>
-      <td>13</td>
+      <td>14</td>
     </tr>
     <tr>
       <th>17</th>
-      <td>0.048621</td>
-      <td>0.007704</td>
-      <td>0.007477</td>
-      <td>0.001935</td>
+      <td>0.028327</td>
+      <td>0.008325</td>
+      <td>0.009577</td>
+      <td>0.005126</td>
       <td>4</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -18333,23 +18340,23 @@ Present your results in a (2-by-2) confusion matrix.</p>
       <td>0.9</td>
       <td>0.6</td>
       <td>...</td>
-      <td>0.9</td>
+      <td>1.0</td>
       <td>0.6</td>
       <td>1.0</td>
       <td>0.7</td>
       <td>0.9</td>
       <td>0.8</td>
       <td>0.7</td>
-      <td>0.79</td>
-      <td>0.130000</td>
-      <td>13</td>
+      <td>0.80</td>
+      <td>0.141421</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>18</th>
-      <td>0.046803</td>
-      <td>0.010155</td>
-      <td>0.007721</td>
-      <td>0.002446</td>
+      <td>0.030767</td>
+      <td>0.006794</td>
+      <td>0.009331</td>
+      <td>0.005005</td>
       <td>5</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -18366,18 +18373,42 @@ Present your results in a (2-by-2) confusion matrix.</p>
       <td>0.7</td>
       <td>0.79</td>
       <td>0.130000</td>
-      <td>13</td>
+      <td>14</td>
     </tr>
     <tr>
       <th>19</th>
-      <td>0.041220</td>
-      <td>0.007981</td>
-      <td>0.008609</td>
-      <td>0.001691</td>
+      <td>0.028191</td>
+      <td>0.006354</td>
+      <td>0.015607</td>
+      <td>0.005640</td>
       <td>6</td>
       <td>l1</td>
       <td>liblinear</td>
       <td>{'model__l1_ratio': 6.0, 'model__penalty': 'l1...</td>
+      <td>0.9</td>
+      <td>0.6</td>
+      <td>...</td>
+      <td>0.9</td>
+      <td>0.6</td>
+      <td>1.0</td>
+      <td>0.7</td>
+      <td>0.9</td>
+      <td>0.8</td>
+      <td>0.7</td>
+      <td>0.79</td>
+      <td>0.130000</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>0.031140</td>
+      <td>0.011088</td>
+      <td>0.011544</td>
+      <td>0.006481</td>
+      <td>7</td>
+      <td>l1</td>
+      <td>liblinear</td>
+      <td>{'model__l1_ratio': 7.0, 'model__penalty': 'l1...</td>
       <td>0.9</td>
       <td>0.6</td>
       <td>...</td>
@@ -18393,35 +18424,11 @@ Present your results in a (2-by-2) confusion matrix.</p>
       <td>1</td>
     </tr>
     <tr>
-      <th>20</th>
-      <td>0.046739</td>
-      <td>0.006493</td>
-      <td>0.007998</td>
-      <td>0.001602</td>
-      <td>7</td>
-      <td>l1</td>
-      <td>liblinear</td>
-      <td>{'model__l1_ratio': 7.0, 'model__penalty': 'l1...</td>
-      <td>0.9</td>
-      <td>0.6</td>
-      <td>...</td>
-      <td>0.9</td>
-      <td>0.6</td>
-      <td>1.0</td>
-      <td>0.7</td>
-      <td>0.9</td>
-      <td>0.8</td>
-      <td>0.7</td>
-      <td>0.79</td>
-      <td>0.130000</td>
-      <td>13</td>
-    </tr>
-    <tr>
       <th>21</th>
-      <td>0.033052</td>
-      <td>0.020481</td>
-      <td>0.006267</td>
-      <td>0.002262</td>
+      <td>0.020867</td>
+      <td>0.005509</td>
+      <td>0.007105</td>
+      <td>0.002555</td>
       <td>8</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -18438,14 +18445,14 @@ Present your results in a (2-by-2) confusion matrix.</p>
       <td>0.7</td>
       <td>0.79</td>
       <td>0.130000</td>
-      <td>13</td>
+      <td>14</td>
     </tr>
     <tr>
       <th>22</th>
-      <td>0.035565</td>
-      <td>0.016783</td>
-      <td>0.006228</td>
-      <td>0.001870</td>
+      <td>0.020513</td>
+      <td>0.006195</td>
+      <td>0.009270</td>
+      <td>0.005782</td>
       <td>9</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -18453,23 +18460,23 @@ Present your results in a (2-by-2) confusion matrix.</p>
       <td>0.9</td>
       <td>0.6</td>
       <td>...</td>
-      <td>0.9</td>
+      <td>1.0</td>
       <td>0.6</td>
       <td>1.0</td>
       <td>0.7</td>
       <td>0.9</td>
       <td>0.8</td>
       <td>0.7</td>
-      <td>0.79</td>
-      <td>0.130000</td>
-      <td>13</td>
+      <td>0.80</td>
+      <td>0.141421</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>23</th>
-      <td>0.041890</td>
-      <td>0.010312</td>
-      <td>0.008264</td>
-      <td>0.001767</td>
+      <td>0.022094</td>
+      <td>0.005744</td>
+      <td>0.008774</td>
+      <td>0.005056</td>
       <td>10</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -18486,14 +18493,14 @@ Present your results in a (2-by-2) confusion matrix.</p>
       <td>0.7</td>
       <td>0.79</td>
       <td>0.130000</td>
-      <td>13</td>
+      <td>14</td>
     </tr>
     <tr>
       <th>24</th>
-      <td>0.048741</td>
-      <td>0.006813</td>
-      <td>0.008641</td>
-      <td>0.001191</td>
+      <td>0.022731</td>
+      <td>0.005560</td>
+      <td>0.006767</td>
+      <td>0.003246</td>
       <td>100</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -18514,10 +18521,10 @@ Present your results in a (2-by-2) confusion matrix.</p>
     </tr>
     <tr>
       <th>25</th>
-      <td>0.043981</td>
-      <td>0.014373</td>
-      <td>0.007841</td>
-      <td>0.002311</td>
+      <td>0.020796</td>
+      <td>0.005832</td>
+      <td>0.009395</td>
+      <td>0.005397</td>
       <td>1000</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -18538,10 +18545,10 @@ Present your results in a (2-by-2) confusion matrix.</p>
     </tr>
     <tr>
       <th>26</th>
-      <td>0.041476</td>
-      <td>0.013024</td>
-      <td>0.007324</td>
-      <td>0.001700</td>
+      <td>0.019377</td>
+      <td>0.005401</td>
+      <td>0.008590</td>
+      <td>0.006368</td>
       <td>10000</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -18558,14 +18565,14 @@ Present your results in a (2-by-2) confusion matrix.</p>
       <td>0.7</td>
       <td>0.79</td>
       <td>0.130000</td>
-      <td>13</td>
+      <td>14</td>
     </tr>
     <tr>
       <th>27</th>
-      <td>0.031746</td>
-      <td>0.009661</td>
-      <td>0.005948</td>
-      <td>0.001645</td>
+      <td>0.017668</td>
+      <td>0.003441</td>
+      <td>0.005031</td>
+      <td>0.001522</td>
       <td>100000</td>
       <td>l1</td>
       <td>liblinear</td>
@@ -18573,16 +18580,16 @@ Present your results in a (2-by-2) confusion matrix.</p>
       <td>0.9</td>
       <td>0.6</td>
       <td>...</td>
-      <td>0.9</td>
+      <td>1.0</td>
       <td>0.6</td>
       <td>1.0</td>
       <td>0.7</td>
       <td>0.9</td>
       <td>0.8</td>
       <td>0.7</td>
-      <td>0.79</td>
-      <td>0.130000</td>
-      <td>13</td>
+      <td>0.80</td>
+      <td>0.141421</td>
+      <td>1</td>
     </tr>
   </tbody>
 </table>
@@ -18626,8 +18633,8 @@ Present your results in a (2-by-2) confusion matrix.</p>
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>CPU times: user 16.9 ms, sys: 1.85 ms, total: 18.7 ms
-Wall time: 13.9 ms
+<pre>CPU times: user 20.7 ms, sys: 2.25 ms, total: 23 ms
+Wall time: 18.3 ms
 </pre>
 </div>
 </div>
@@ -18730,43 +18737,43 @@ Wall time: 13.9 ms
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
 <pre>array([[ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        -0.93605731,  0.        ,  0.        ,  0.        ,  0.        ,
-         0.        ,  0.72447412,  0.26907875,  0.        ,  0.        ,
+        -0.92179886,  0.        ,  0.        ,  0.        ,  0.        ,
+         0.        ,  0.74472664,  0.24509873,  0.        ,  0.        ,
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-         0.        ,  0.        ,  0.        ,  0.        , -0.58076815,
-         0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-         0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-         0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+         0.        ,  0.        ,  0.        ,  0.        , -0.58586283,
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-         0.        ,  0.        ,  0.        ,  0.00511925,  0.        ,
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-         0.        ,  0.        ,  0.        ,  0.        ,  0.51450486,
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        -0.485138  ,  0.        ,  0.        ,  0.        ,  0.        ,
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-         0.        ,  0.        ,  0.        ,  0.        , -0.27317361,
-        -1.08253603,  0.        ,  0.        ,  0.        ,  0.        ,
-        -0.02365332,  0.        ,  0.        ,  0.        ,  0.06089691,
+         0.        ,  0.        ,  0.        ,  0.00698769,  0.        ,
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-         0.        ,  0.        ,  0.        , -0.14440764,  0.        ,
-        -0.08781232,  0.        ,  0.        , -0.04900618,  0.        ,
-         0.        , -0.19663665,  0.        , -0.19549342,  0.        ,
-         0.        ,  0.04909758,  0.        ,  0.        ,  0.        ,
-         0.        ,  0.33358013,  0.        ,  0.        ,  0.15115459,
+         0.        ,  0.        ,  0.        ,  0.        ,  0.51095023,
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-         0.        , -0.04396081,  0.        ,  0.        ,  0.        ,
-         0.32612361,  0.        ,  0.        ,  0.21597573,  0.        ,
-        -0.65982408,  0.        ,  0.        ,  0.        ,  0.        ,
-         0.        ,  0.        ,  0.        ,  0.11048529,  0.        ,
-        -0.23763258,  0.        ,  0.        ,  0.        ,  0.12916957,
-         0.        ,  0.        ,  0.        ,  0.48691122,  0.        ,
-         0.        ,  0.        , -0.17212294,  0.        , -0.59909871,
-         0.        ,  0.        ,  0.0097343 ,  0.        ,  0.        ,
-         0.17018718, -0.22074327, -0.48753198,  0.        ,  0.        ,
-         0.        ,  0.        ,  0.        ,  0.        , -0.51971039,
+        -0.4800517 ,  0.        ,  0.        ,  0.        ,  0.        ,
+         0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+         0.        ,  0.        ,  0.        ,  0.        , -0.27212036,
+        -1.07855113,  0.        ,  0.        ,  0.        ,  0.        ,
+        -0.0263807 ,  0.        ,  0.        ,  0.        ,  0.06863114,
+         0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+         0.        ,  0.        ,  0.        , -0.14336936,  0.        ,
+        -0.08807571,  0.        ,  0.00213676, -0.05138216,  0.        ,
+         0.        , -0.1970358 ,  0.        , -0.19645207,  0.        ,
+         0.        ,  0.0527211 ,  0.        ,  0.        ,  0.        ,
+         0.        ,  0.33475834,  0.        ,  0.        ,  0.14518843,
+         0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+         0.        , -0.04532306,  0.        ,  0.        ,  0.        ,
+         0.32121674,  0.        ,  0.        ,  0.21552929,  0.        ,
+        -0.65928701,  0.        ,  0.        ,  0.        ,  0.        ,
+         0.        ,  0.        ,  0.        ,  0.10610168,  0.        ,
+        -0.23871514,  0.        ,  0.        ,  0.        ,  0.12793385,
+         0.        ,  0.        ,  0.        ,  0.48689053,  0.        ,
+         0.        ,  0.        , -0.17487943,  0.        , -0.59670345,
+         0.        ,  0.        ,  0.01056773,  0.        ,  0.        ,
+         0.17032262, -0.22192158, -0.48690717,  0.        ,  0.        ,
+         0.        ,  0.        ,  0.        ,  0.        , -0.52868189,
          0.        ]])</pre>
 </div>
 
@@ -18787,9 +18794,23 @@ information? Try to interpret the model.</p>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>The results did not improve, they are still around 0.84. The cross-validation results now give 2 different mean test scores though, which are 0.80 and 0.79. This is still lower than what we got in our first model.</p>
-<p>Most coefficients that are not 0 seems to belong to X_train_diff. This is an interesting observation.</p>
+<p>Most coefficients that are not 0 seem to belong to X_train_diff. This is an interesting observation.</p>
 
 </div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
 </div>
 </body>
 
